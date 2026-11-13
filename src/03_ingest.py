@@ -43,13 +43,52 @@ def paragraph_chunks(text, max_chars=1000):
         yield buffer, offset, offset + len(buffer)
 
 
-def prepare(strategy, pages):
+SENTENCE_SPLIT = re.compile(r'(?<=[.!?])\s+|\s+(?=•\s)')
+
+
+def sentence_token_chunks(text, count_tokens, max_tokens=128):
+    """Strategy D: pack whole sentences while the chunk stays <= max_tokens (model tokenizer,
+    special tokens included). A sentence longer than max_tokens is split on word boundaries.
+    Offsets refer to the whitespace-normalised page text."""
+    flat = ' '.join(text.split())
+    units = []
+    for sentence in (s for s in SENTENCE_SPLIT.split(flat) if s.strip()):
+        if count_tokens(sentence) <= max_tokens:
+            units.append(sentence)
+            continue
+        piece = []
+        for word in sentence.split(' '):
+            if piece and count_tokens(' '.join(piece + [word])) > max_tokens:
+                units.append(' '.join(piece))
+                piece = []
+            piece.append(word)
+        if piece:
+            units.append(' '.join(piece))
+    current, cursor = [], 0
+    for unit in units + [None]:
+        if unit is not None and (not current or count_tokens(' '.join(current + [unit])) <= max_tokens):
+            current.append(unit)
+            continue
+        chunk = ' '.join(current)
+        start = flat.find(chunk, cursor)
+        start = cursor if start < 0 else start
+        cursor = start + len(chunk)
+        yield chunk, start, cursor
+        current = [unit] if unit is not None else []
+
+
+def prepare(strategy, pages, count_tokens=None, max_tokens=128):
     result = []
     for page in pages:
         if not page.get('eligible_content_page', page['candidate_content_page']) or not page['text']:
             continue
-        method = fixed_chunks if strategy == 'A' else paragraph_chunks
-        for i, (content, start, end) in enumerate(method(page['text'])):
+        if strategy == 'A':
+            pieces = fixed_chunks(page['text'])
+        elif strategy in ('B', 'C'):
+            pieces = paragraph_chunks(page['text'])
+        else:  # D, E
+            pieces = sentence_token_chunks(page['text'], count_tokens, max_tokens)
+        for i, (content, start, end) in enumerate(pieces):
             content = content.strip()
             if not content:
                 continue
@@ -89,9 +128,10 @@ def main():
     dim = len(sample[0])
     client = chromadb.PersistentClient(path=str(ARTIFACTS / 'chroma'))
     metrics = []
-    for strategy in 'ABC':
+    count_tokens = lambda t: len(encoder.tokenizer(t, add_special_tokens=True)['input_ids'])
+    for strategy in 'ABCDE':
         t0 = time.perf_counter()
-        chunks = prepare(strategy, pages)
+        chunks = prepare(strategy, pages, count_tokens, encoder.max_seq_length)
         if not chunks:
             raise ValueError(f'No chunks for strategy {strategy}')
         collection_name = f'nist_rmf_{strategy.lower()}'
@@ -115,7 +155,7 @@ def main():
         write_jsonl(PROCESSED / f'chunks_{strategy}.jsonl', chunks)
         row = {'strategy': strategy, 'collection': collection_name, 'document_count': len({c['metadata']['document_id'] for c in chunks}),
                'chunk_count': len(chunks), 'embedding_model': args.model, 'embedding_dimension': dim,
-               'vector_store': 'Chroma', 'distance': 'cosine', 'metadata_filter_supported': strategy == 'C',
+               'vector_store': 'Chroma', 'distance': 'cosine', 'metadata_filter_supported': strategy in ('C', 'E'),
                'mean_chunk_characters': round(mean(len(t) for t in texts), 2), 'total_chunk_characters': sum(map(len, texts)),
                'min_chunk_characters': char_lens[0], 'median_chunk_characters': char_lens[len(char_lens) // 2],
                'max_chunk_characters': char_lens[-1],

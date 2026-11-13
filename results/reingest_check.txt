@@ -1,7 +1,9 @@
-Re-ingest check (same source version), run at 2026-11-13T11:57:06.589588+00:00
+Re-ingest check (same source version, consecutive runs of 03_ingest.py), run at 2026-11-13T12:14:18.745389+00:00
 input_sha256 run1 == run2: True
 A: run1 chunks=561 run2 chunks=561 collection.count()=561 unique_ids=561 -> OK no duplicates
 B: run1 chunks=330 run2 chunks=330 collection.count()=330 unique_ids=330 -> OK no duplicates
 C: run1 chunks=330 run2 chunks=330 collection.count()=330 unique_ids=330 -> OK no duplicates
-Collections in store: ['nist_rmf_a', 'nist_rmf_b', 'nist_rmf_c']
+D: run1 chunks=544 run2 chunks=544 collection.count()=544 unique_ids=544 -> OK no duplicates
+E: run1 chunks=544 run2 chunks=544 collection.count()=544 unique_ids=544 -> OK no duplicates
+Collections in store: ['nist_rmf_a', 'nist_rmf_b', 'nist_rmf_c', 'nist_rmf_d', 'nist_rmf_e']
 RESULT: PASS

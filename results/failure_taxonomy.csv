@@ -1,0 +1,141 @@
+strategy,question_id,split,category,evidence_rank_in_collection
+A,q01,dev,1 hit@1,1
+A,q02,dev,3 miss: evidence split across chunks,
+A,q03,dev,6 miss: semantic (rank >10),36
+A,q04,dev,3 miss: evidence split across chunks,
+A,q05,dev,1 hit@1,1
+A,q06,dev,3 miss: evidence split across chunks,
+A,q07,dev,1 hit@1,1
+A,q08,dev,3 miss: evidence split across chunks,
+A,q09,dev,2 hit@2-3,2
+A,q10,dev,6 miss: semantic (rank >10),169
+A,q11,dev,1 hit@1,1
+A,q12,dev,6 miss: semantic (rank >10),118
+A,q13,dev,1 hit@1,1
+A,q14,dev,6 miss: semantic (rank >10),26
+A,q15,dev,6 miss: semantic (rank >10),16
+A,q16,test,5 miss: near (rank 4-10),9
+A,q17,test,6 miss: semantic (rank >10),112
+A,q18,test,3 miss: evidence split across chunks,
+A,q19,test,1 hit@1,1
+A,q20,test,3 miss: evidence split across chunks,
+A,q21,test,1 hit@1,1
+A,q22,test2,6 miss: semantic (rank >10),25
+A,q23,test2,6 miss: semantic (rank >10),43
+A,q24,test2,1 hit@1,1
+A,q25,test2,1 hit@1,1
+A,q26,test2,6 miss: semantic (rank >10),23
+A,q27,test2,2 hit@2-3,2
+A,q28,test2,6 miss: semantic (rank >10),98
+B,q01,dev,1 hit@1,1
+B,q02,dev,1 hit@1,1
+B,q03,dev,6 miss: semantic (rank >10),24
+B,q04,dev,5 miss: near (rank 4-10),4
+B,q05,dev,1 hit@1,1
+B,q06,dev,5 miss: near (rank 4-10),4
+B,q07,dev,1 hit@1,1
+B,q08,dev,2 hit@2-3,2
+B,q09,dev,1 hit@1,1
+B,q10,dev,6 miss: semantic (rank >10),113
+B,q11,dev,4 miss: evidence beyond 128-token window,7
+B,q12,dev,3 miss: evidence split across chunks,
+B,q13,dev,4 miss: evidence beyond 128-token window,252
+B,q14,dev,6 miss: semantic (rank >10),16
+B,q15,dev,4 miss: evidence beyond 128-token window,48
+B,q16,test,5 miss: near (rank 4-10),5
+B,q17,test,6 miss: semantic (rank >10),104
+B,q18,test,3 miss: evidence split across chunks,
+B,q19,test,2 hit@2-3,2
+B,q20,test,2 hit@2-3,2
+B,q21,test,1 hit@1,1
+B,q22,test2,4 miss: evidence beyond 128-token window,6
+B,q23,test2,6 miss: semantic (rank >10),47
+B,q24,test2,2 hit@2-3,2
+B,q25,test2,1 hit@1,1
+B,q26,test2,6 miss: semantic (rank >10),16
+B,q27,test2,1 hit@1,1
+B,q28,test2,1 hit@1,1
+C,q01,dev,1 hit@1,1
+C,q02,dev,1 hit@1,1
+C,q03,dev,6 miss: semantic (rank >10),24
+C,q04,dev,5 miss: near (rank 4-10),4
+C,q05,dev,1 hit@1,1
+C,q06,dev,5 miss: near (rank 4-10),4
+C,q07,dev,1 hit@1,1
+C,q08,dev,2 hit@2-3,2
+C,q09,dev,1 hit@1,1
+C,q10,dev,6 miss: semantic (rank >10),113
+C,q11,dev,4 miss: evidence beyond 128-token window,7
+C,q12,dev,3 miss: evidence split across chunks,
+C,q13,dev,4 miss: evidence beyond 128-token window,252
+C,q14,dev,6 miss: semantic (rank >10),14
+C,q15,dev,4 miss: evidence beyond 128-token window,18
+C,q16,test,5 miss: near (rank 4-10),5
+C,q17,test,6 miss: semantic (rank >10),104
+C,q18,test,3 miss: evidence split across chunks,
+C,q19,test,2 hit@2-3,2
+C,q20,test,2 hit@2-3,2
+C,q21,test,1 hit@1,1
+C,q22,test2,4 miss: evidence beyond 128-token window,6
+C,q23,test2,6 miss: semantic (rank >10),47
+C,q24,test2,2 hit@2-3,2
+C,q25,test2,1 hit@1,1
+C,q26,test2,6 miss: semantic (rank >10),16
+C,q27,test2,1 hit@1,1
+C,q28,test2,1 hit@1,1
+D,q01,dev,1 hit@1,1
+D,q02,dev,5 miss: near (rank 4-10),10
+D,q03,dev,6 miss: semantic (rank >10),42
+D,q04,dev,5 miss: near (rank 4-10),10
+D,q05,dev,6 miss: semantic (rank >10),18
+D,q06,dev,5 miss: near (rank 4-10),4
+D,q07,dev,2 hit@2-3,3
+D,q08,dev,1 hit@1,1
+D,q09,dev,1 hit@1,1
+D,q10,dev,6 miss: semantic (rank >10),78
+D,q11,dev,1 hit@1,1
+D,q12,dev,6 miss: semantic (rank >10),38
+D,q13,dev,2 hit@2-3,2
+D,q14,dev,1 hit@1,1
+D,q15,dev,5 miss: near (rank 4-10),10
+D,q16,test,1 hit@1,1
+D,q17,test,6 miss: semantic (rank >10),136
+D,q18,test,5 miss: near (rank 4-10),4
+D,q19,test,2 hit@2-3,2
+D,q20,test,6 miss: semantic (rank >10),19
+D,q21,test,1 hit@1,1
+D,q22,test2,3 miss: evidence split across chunks,
+D,q23,test2,6 miss: semantic (rank >10),12
+D,q24,test2,1 hit@1,1
+D,q25,test2,1 hit@1,1
+D,q26,test2,6 miss: semantic (rank >10),15
+D,q27,test2,1 hit@1,1
+D,q28,test2,6 miss: semantic (rank >10),40
+E,q01,dev,1 hit@1,1
+E,q02,dev,5 miss: near (rank 4-10),10
+E,q03,dev,6 miss: semantic (rank >10),42
+E,q04,dev,5 miss: near (rank 4-10),10
+E,q05,dev,6 miss: semantic (rank >10),18
+E,q06,dev,5 miss: near (rank 4-10),4
+E,q07,dev,2 hit@2-3,3
+E,q08,dev,1 hit@1,1
+E,q09,dev,1 hit@1,1
+E,q10,dev,6 miss: semantic (rank >10),78
+E,q11,dev,1 hit@1,1
+E,q12,dev,6 miss: semantic (rank >10),38
+E,q13,dev,2 hit@2-3,2
+E,q14,dev,1 hit@1,1
+E,q15,dev,5 miss: near (rank 4-10),5
+E,q16,test,1 hit@1,1
+E,q17,test,6 miss: semantic (rank >10),136
+E,q18,test,5 miss: near (rank 4-10),4
+E,q19,test,2 hit@2-3,2
+E,q20,test,5 miss: near (rank 4-10),4
+E,q21,test,1 hit@1,1
+E,q22,test2,3 miss: evidence split across chunks,
+E,q23,test2,6 miss: semantic (rank >10),12
+E,q24,test2,1 hit@1,1
+E,q25,test2,1 hit@1,1
+E,q26,test2,6 miss: semantic (rank >10),15
+E,q27,test2,1 hit@1,1
+E,q28,test2,6 miss: semantic (rank >10),31

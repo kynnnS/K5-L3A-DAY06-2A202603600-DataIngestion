@@ -1,19 +1,66 @@
-strategy,question_id,label_0_2,reason
-A,q16,0,"Top-3 has related Appendix B bullets (stale datasets) on p43 but not the maintenance/drift statement; question cannot be answered."
-A,q17,1,"Rank 2 (p30) says MAP output informs an initial go/no-go decision: related but not the listed expected benefit of explicit go/no-go processes (p24)."
-A,q18,0,"No chunk defines the Value Chain risk; p25 only tags actions with it, p7 and p9 are off-topic."
-A,q19,2,"Rank 1 contains the full list of provenance techniques; traceable to AI 600-1 p55."
-A,q20,0,"Gold p6 absent; AI 600-1 p7 chunks discuss risk labelling, not the definition; rank 3 is from the framework."
-A,q21,2,"Rank 1 contains the three bias categories; traceable to AI 100-1 p23."
-B,q16,0,"No chunk from Appendix B p43; retrieved bias, validity and executive-summary text."
-B,q17,1,"Rank 1 (p30) gives the related MAP go/no-go statement, not the expected-benefit bullet on p24."
-B,q18,0,"Only the risk name inside the categorisation footnote (p7); no definition."
-B,q19,2,"Rank 2 contains the full list of techniques (p55)."
-B,q20,2,"Rank 2 contains the profile's risk definition including '(or likelihood)'; rank 3 is from the framework (filter not applied in B)."
-B,q21,2,"Rank 1 contains the three bias categories (p23)."
-C,q16,0,"Unfiltered question: identical to B."
-C,q17,1,"Unfiltered question: identical to B."
-C,q18,0,"Unfiltered question: identical to B."
-C,q19,2,"Unfiltered question: identical to B."
-C,q20,2,"Rank 2 contains the profile definition; with the filter, all three results are from the profile."
-C,q21,2,"Rank 1 contains the three bias categories; with the filter, all three results are from the framework."
+strategy,split,question_id,label_0_2,reason
+A,test,q16,0,Top-3 has related Appendix B bullets (stale datasets) on p43 but not the maintenance/drift statement; question cannot be answered.
+A,test,q17,1,Rank 2 (p30) says MAP output informs an initial go/no-go decision: related but not the listed expected benefit of explicit go/no-go processes (p24).
+A,test,q18,0,"No chunk defines the Value Chain risk; p25 only tags actions with it, p7 and p9 are off-topic."
+A,test,q19,2,Rank 1 contains the full list of provenance techniques; traceable to AI 600-1 p55.
+A,test,q20,0,"Gold p6 absent; AI 600-1 p7 chunks discuss risk labelling, not the definition; rank 3 is from the framework."
+A,test,q21,2,Rank 1 contains the three bias categories; traceable to AI 100-1 p23.
+B,test,q16,0,"No chunk from Appendix B p43; retrieved bias, validity and executive-summary text."
+B,test,q17,1,"Rank 1 (p30) gives the related MAP go/no-go statement, not the expected-benefit bullet on p24."
+B,test,q18,0,Only the risk name inside the categorisation footnote (p7); no definition.
+B,test,q19,2,Rank 2 contains the full list of techniques (p55).
+B,test,q20,2,Rank 2 contains the profile's risk definition including '(or likelihood)'; rank 3 is from the framework (filter not applied in B).
+B,test,q21,2,Rank 1 contains the three bias categories (p23).
+C,test,q16,0,Unfiltered question: identical to B.
+C,test,q17,1,Unfiltered question: identical to B.
+C,test,q18,0,Unfiltered question: identical to B.
+C,test,q19,2,Unfiltered question: identical to B.
+C,test,q20,2,"Rank 2 contains the profile definition; with the filter, all three results are from the profile."
+C,test,q21,2,"Rank 1 contains the three bias categories; with the filter, all three results are from the framework."
+D,test,q16,2,Rank 1 contains the maintenance/drift bullet (p43).
+D,test,q17,0,No go/no-go evidence; MAP 3.2 cost table and a resources sentence.
+D,test,q18,0,No definition of the Value Chain risk; generic risk text.
+D,test,q19,2,Rank 2 contains the list of provenance techniques (p55).
+D,test,q20,1,"Rank 3 is the framework's risk definition (AI 100-1 p9): same idea, but the user asked for the profile and it lacks '(or likelihood)'; profile p6 is absent."
+D,test,q21,2,Rank 1 contains the three bias categories (p23).
+E,test,q16,2,Unfiltered question: identical to D.
+E,test,q17,0,Unfiltered question: identical to D.
+E,test,q18,0,Unfiltered question: identical to D.
+E,test,q19,2,Unfiltered question: identical to D.
+E,test,q20,0,"Filter removes the framework definition; profile p6 chunk retrieved is the next sentence ('AI risks can differ...'), not the definition."
+E,test,q21,2,Rank 1 contains the three bias categories; all results from the framework.
+A,test2,q22,0,No chunk states what/how/why; only general mentions of explainability and transparency.
+A,test2,q23,0,Rank 1 is the neighbouring text on p21 but without the 'consequences are severe' condition.
+A,test2,q24,2,Rank 1 contains 'not necessarily fair' (p22).
+A,test2,q25,2,Rank 1 contains the 300-roundtrip-flights estimate (p12).
+A,test2,q26,0,Framework security text only; not the two GAI security risks (AI 600-1 p14).
+A,test2,q27,2,Rank 2 contains the speed-and-scale statement (p12).
+A,test2,q28,1,"Rank 2 is the continuation of the privacy paragraph (p22) describing privacy norms, but not the definition sentence."
+B,test2,q22,0,Transparency definitions on p20 only; no what/how/why.
+B,test2,q23,0,Accountability/governance text without the severity condition.
+B,test2,q24,2,Rank 2 contains 'not necessarily fair' (p22).
+B,test2,q25,2,Rank 1 contains the estimate (p12).
+B,test2,q26,0,No GAI security-risk text.
+B,test2,q27,2,Rank 1 contains the statement (p12).
+B,test2,q28,2,Rank 1 contains the privacy definition (p22).
+C,test2,q22,0,Unfiltered question: identical to B.
+C,test2,q23,0,Unfiltered question: identical to B.
+C,test2,q24,2,Unfiltered question: identical to B.
+C,test2,q25,2,Unfiltered question: identical to B.
+C,test2,q26,0,Unfiltered question: identical to B.
+C,test2,q27,2,Rank 1 contains the statement; all results from the profile.
+C,test2,q28,2,Rank 1 contains the definition; all results from the framework.
+D,test2,q22,1,"Rank 1 gives the explainability vs interpretability definitions (mechanisms vs meaning): related, but the what/how/why sentence is not retrieved (split into another chunk)."
+D,test2,q23,0,Neighbouring p21 sentence without the severity condition.
+D,test2,q24,2,Rank 1 contains 'not necessarily fair' (p22).
+D,test2,q25,2,Rank 1 contains the estimate (p12).
+D,test2,q26,0,Framework security concerns (data poisoning) but not the two GAI risks.
+D,test2,q27,2,Rank 1 contains the statement (p12).
+D,test2,q28,0,"All three chunks are matched on the running header 'NIST AI 100-1 AI RMF 1.0' (p47, p25, p8); no privacy text."
+E,test2,q22,1,Unfiltered question: identical to D.
+E,test2,q23,0,Unfiltered question: identical to D.
+E,test2,q24,2,Unfiltered question: identical to D.
+E,test2,q25,2,Unfiltered question: identical to D.
+E,test2,q26,0,Unfiltered question: identical to D.
+E,test2,q27,2,Rank 1 contains the statement; all results from the profile.
+E,test2,q28,0,"Same header-matched chunks as D (all from the framework, so the filter is satisfied but there is no evidence)."

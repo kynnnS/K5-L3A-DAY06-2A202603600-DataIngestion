@@ -22,10 +22,10 @@ def main():
     tok = encoder.tokenizer
     max_len = encoder.max_seq_length
     client = chromadb.PersistentClient(path=str(ARTIFACTS / 'chroma'))
-    questions = list(iter_jsonl(ROOT / 'benchmark' / 'questions.jsonl'))
+    questions = list(iter_jsonl(ROOT / 'benchmark' / 'questions.jsonl')) + list(iter_jsonl(ROOT / 'benchmark' / 'questions_test2.jsonl'))
     qvecs = encoder.encode([q['question'] for q in questions], normalize_embeddings=True)
     rows = []
-    for strategy in 'ABC':
+    for strategy in 'ABCDE':
         coll = client.get_collection(f'nist_rmf_{strategy.lower()}')
         chunks = list(iter_jsonl(PROCESSED / f'chunks_{strategy}.jsonl'))
         n_all = coll.count()
@@ -35,7 +35,7 @@ def main():
             containing = [(c, quote) for c in chunks for s, p, quote in golds
                           if c['metadata']['document_id'] == s and c['metadata']['page'] == p
                           and squash(quote) in squash(c['text'])]
-            use_filter = strategy == 'C' and bool(q.get('filter'))
+            use_filter = strategy in ('C', 'E') and bool(q.get('filter'))
             opts = {'query_embeddings': [vec.tolist()], 'n_results': n_all, 'include': []}
             if use_filter:
                 opts['where'] = q['filter']
@@ -65,11 +65,11 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
-    for s in 'ABC':
+    for s in 'ABCDE':
         sr = [r for r in rows if r['strategy'] == s]
-        print(f"{s}: evidence fragmented (no chunk holds full quote) {sum(r['evidence_fragmented'] for r in sr)}/21 | "
-              f"quote not fully inside embedded window {sum(r['quote_fully_embedded'] is False for r in sr)}/21 | "
-              f"quote starts in truncated tail {sum(r['quote_start_truncated'] is True for r in sr)}/21")
+        print(f"{s}: evidence fragmented (no chunk holds full quote) {sum(r['evidence_fragmented'] for r in sr)}/{len(sr)} | "
+              f"quote not fully inside embedded window {sum(r['quote_fully_embedded'] is False for r in sr)}/{len(sr)} | "
+              f"quote starts in truncated tail {sum(r['quote_start_truncated'] is True for r in sr)}/{len(sr)}")
     print('written', path)
 
 

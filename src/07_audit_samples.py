@@ -17,9 +17,28 @@ def squash(text):
 
 
 def chunk_span(chunk, page_text):
+    """Span of the chunk in raw page coordinates. D/E chunks are whitespace-normalised, so they
+    are located in the normalised page text and mapped back to a raw offset."""
     pos = page_text.find(chunk['text'])
     if pos >= 0:
         return pos, pos + len(chunk['text']), 'exact'
+    flat, target = squash(page_text), squash(chunk['text'])
+    fpos = flat.find(target)
+    if fpos >= 0:
+        # map normalised offsets back to raw offsets (a whitespace run counts as one character)
+        start = end = None
+        k = 0
+        for i, ch in enumerate(page_text):
+            if ch.isspace() and (i == 0 or page_text[i - 1].isspace()):
+                continue
+            if k == fpos and start is None:
+                start = i
+            k += 1
+            if k == fpos + len(target):
+                end = i + 1
+                break
+        if start is not None and end is not None:
+            return start, end, 'normalised'
     m = chunk['metadata']
     return m['start_char'], m['end_char_approx'], 'metadata_approx'
 
@@ -32,7 +51,7 @@ def main():
 
     # 1) Coherence: chunk covering each fixed position, per strategy.
     rows = []
-    for strategy in 'ABC':
+    for strategy in 'ABCDE':
         chunks = [c for c in iter_jsonl(PROCESSED / f'chunks_{strategy}.jsonl')]
         for pos in positions:
             page_text = pages[pos['page_id']]['text']
@@ -53,9 +72,9 @@ def main():
 
     # 2) Metadata + 3) Grounding: all test questions, top-3, per strategy.
     meta_rows, ground_rows = [], []
-    for strategy in 'ABC':
+    for strategy in 'ABCDE':
         for t in iter_jsonl(RESULTS / f'traces_{strategy}.jsonl'):
-            if t['split'] != 'test':
+            if t['split'] not in ('test', 'test2'):
                 continue
             for r in t['results']:
                 m = r['metadata']
@@ -70,13 +89,13 @@ def main():
                     'year_matches': m['year'] == int(src.get('issued_at', '0000')[:4]),
                 }
                 flt = t['filter_requested'] or {}
-                meta_rows.append({'strategy': strategy, 'question_id': t['question_id'], 'rank': r['rank'],
+                meta_rows.append({'strategy': strategy, 'split': t['split'], 'question_id': t['question_id'], 'rank': r['rank'],
                                   'chunk_id': r['chunk_id'], 'document_id': m['document_id'], 'page': m['page'],
                                   'document_type': m['document_type'], 'year': m['year'], **checks,
                                   'all_fields_correct': all(checks.values()),
                                   'filter_requested': json.dumps(flt) if flt else '',
                                   'satisfies_filter': all(m.get(k) == v for k, v in flt.items()) if flt else ''})
-            ground_rows.append({'strategy': strategy, 'question_id': t['question_id'], 'question': t['question'],
+            ground_rows.append({'strategy': strategy, 'split': t['split'], 'question_id': t['question_id'], 'question': t['question'],
                                 'expected_answer': t['expected_answer'],
                                 'gold': '; '.join(f"{g['source_id']} p{g['page']}" for g in t['gold']),
                                 'evidence_hit_at_3_auto': t['evidence_hit_at_3'],

@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-13T11:57:24.377348+00:00",
+  "run_at": "2026-11-13T12:14:35.477599+00:00",
   "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
   "top_k": 3,
-  "question_embedding_seconds": 0.204,
+  "question_embedding_seconds": 0.118,
   "hit_definition": "document_id+page match a gold entry AND chunk contains full evidence quote (whitespace-normalised)",
   "metrics": [
     {
@@ -24,7 +24,7 @@
         "n": 0,
         "N": 2
       },
-      "query_seconds_all_questions": 0.031
+      "query_seconds_all_questions": 0.118
     },
     {
       "strategy": "A",
@@ -45,7 +45,28 @@
         "n": 1,
         "N": 2
       },
-      "query_seconds_all_questions": 0.031
+      "query_seconds_all_questions": 0.118
+    },
+    {
+      "strategy": "A",
+      "split": "test2",
+      "hit_at_1": {
+        "n": 2,
+        "N": 7
+      },
+      "evidence_hit_at_3": {
+        "n": 3,
+        "N": 7
+      },
+      "page_hit_at_3": {
+        "n": 5,
+        "N": 7
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.118
     },
     {
       "strategy": "A",
@@ -66,7 +87,7 @@
         "n": 1,
         "N": 4
       },
-      "query_seconds_all_questions": 0.031
+      "query_seconds_all_questions": 0.118
     },
     {
       "strategy": "B",
@@ -87,7 +108,7 @@
         "n": 1,
         "N": 2
       },
-      "query_seconds_all_questions": 0.021
+      "query_seconds_all_questions": 0.027
     },
     {
       "strategy": "B",
@@ -108,7 +129,28 @@
         "n": 1,
         "N": 2
       },
-      "query_seconds_all_questions": 0.021
+      "query_seconds_all_questions": 0.027
+    },
+    {
+      "strategy": "B",
+      "split": "test2",
+      "hit_at_1": {
+        "n": 3,
+        "N": 7
+      },
+      "evidence_hit_at_3": {
+        "n": 4,
+        "N": 7
+      },
+      "page_hit_at_3": {
+        "n": 4,
+        "N": 7
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.027
     },
     {
       "strategy": "B",
@@ -129,7 +171,7 @@
         "n": 2,
         "N": 4
       },
-      "query_seconds_all_questions": 0.021
+      "query_seconds_all_questions": 0.027
     },
     {
       "strategy": "C",
@@ -150,7 +192,7 @@
         "n": 2,
         "N": 2
       },
-      "query_seconds_all_questions": 0.023
+      "query_seconds_all_questions": 0.041
     },
     {
       "strategy": "C",
@@ -171,7 +213,28 @@
         "n": 2,
         "N": 2
       },
-      "query_seconds_all_questions": 0.023
+      "query_seconds_all_questions": 0.041
+    },
+    {
+      "strategy": "C",
+      "split": "test2",
+      "hit_at_1": {
+        "n": 3,
+        "N": 7
+      },
+      "evidence_hit_at_3": {
+        "n": 4,
+        "N": 7
+      },
+      "page_hit_at_3": {
+        "n": 4,
+        "N": 7
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.041
     },
     {
       "strategy": "C",
@@ -192,7 +255,175 @@
         "n": 4,
         "N": 4
       },
-      "query_seconds_all_questions": 0.023
+      "query_seconds_all_questions": 0.041
+    },
+    {
+      "strategy": "D",
+      "split": "dev",
+      "hit_at_1": {
+        "n": 5,
+        "N": 15
+      },
+      "evidence_hit_at_3": {
+        "n": 7,
+        "N": 15
+      },
+      "page_hit_at_3": {
+        "n": 9,
+        "N": 15
+      },
+      "filter_compliance": {
+        "n": 1,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.033
+    },
+    {
+      "strategy": "D",
+      "split": "test",
+      "hit_at_1": {
+        "n": 2,
+        "N": 6
+      },
+      "evidence_hit_at_3": {
+        "n": 3,
+        "N": 6
+      },
+      "page_hit_at_3": {
+        "n": 3,
+        "N": 6
+      },
+      "filter_compliance": {
+        "n": 1,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.033
+    },
+    {
+      "strategy": "D",
+      "split": "test2",
+      "hit_at_1": {
+        "n": 3,
+        "N": 7
+      },
+      "evidence_hit_at_3": {
+        "n": 3,
+        "N": 7
+      },
+      "page_hit_at_3": {
+        "n": 4,
+        "N": 7
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.033
+    },
+    {
+      "strategy": "D",
+      "split": "all",
+      "hit_at_1": {
+        "n": 7,
+        "N": 21
+      },
+      "evidence_hit_at_3": {
+        "n": 10,
+        "N": 21
+      },
+      "page_hit_at_3": {
+        "n": 12,
+        "N": 21
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 4
+      },
+      "query_seconds_all_questions": 0.033
+    },
+    {
+      "strategy": "E",
+      "split": "dev",
+      "hit_at_1": {
+        "n": 5,
+        "N": 15
+      },
+      "evidence_hit_at_3": {
+        "n": 7,
+        "N": 15
+      },
+      "page_hit_at_3": {
+        "n": 9,
+        "N": 15
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.036
+    },
+    {
+      "strategy": "E",
+      "split": "test",
+      "hit_at_1": {
+        "n": 2,
+        "N": 6
+      },
+      "evidence_hit_at_3": {
+        "n": 3,
+        "N": 6
+      },
+      "page_hit_at_3": {
+        "n": 4,
+        "N": 6
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.036
+    },
+    {
+      "strategy": "E",
+      "split": "test2",
+      "hit_at_1": {
+        "n": 3,
+        "N": 7
+      },
+      "evidence_hit_at_3": {
+        "n": 3,
+        "N": 7
+      },
+      "page_hit_at_3": {
+        "n": 4,
+        "N": 7
+      },
+      "filter_compliance": {
+        "n": 2,
+        "N": 2
+      },
+      "query_seconds_all_questions": 0.036
+    },
+    {
+      "strategy": "E",
+      "split": "all",
+      "hit_at_1": {
+        "n": 7,
+        "N": 21
+      },
+      "evidence_hit_at_3": {
+        "n": 10,
+        "N": 21
+      },
+      "page_hit_at_3": {
+        "n": 13,
+        "N": 21
+      },
+      "filter_compliance": {
+        "n": 4,
+        "N": 4
+      },
+      "query_seconds_all_questions": 0.036
     }
   ]
 }

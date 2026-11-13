@@ -1,0 +1,10 @@
+#,strategy,question_id,rank,chunk_id,document_id,document_type (metadata),page (metadata),open_pdf_at_page,search_snippet (Cmd+F),student_check_page_correct (Y/N),student_check_type_correct (Y/N),note
+1,A,q16,1,A:NIST-AI-100-1:pdf:006:chunk:0003,NIST-AI-100-1,framework,6,https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf#page=6,"on data that can change over time, sometimes",,,
+2,A,q19,1,A:NIST-AI-600-1:pdf:055:chunk:0004,NIST-AI-600-1,profile,55,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=55,"data tracking techniques can help assess the authenticity,",,,
+3,A,q20,1,A:NIST-AI-600-1:pdf:007:chunk:0005,NIST-AI-600-1,profile,7,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=7,use of GAI are defined below.5 Each risk,,,
+4,C,q17,1,C:NIST-AI-100-1:pdf:030:chunk:0003,NIST-AI-100-1,framework,30,https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf#page=30,"function, Framework users should have sufficient contextual knowledge",,,
+5,C,q20,1,C:NIST-AI-600-1:pdf:007:chunk:0003,NIST-AI-600-1,profile,7,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=7,be further categorized by organizations depending on their,,,
+6,C,q21,1,C:NIST-AI-100-1:pdf:023:chunk:0001,NIST-AI-100-1,framework,23,https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf#page=23,demographic balance and data representativeness. NIST has identified,,,
+7,E,q18,1,E:NIST-AI-100-1:pdf:009:chunk:0001,NIST-AI-100-1,framework,9,https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf#page=9,"Risks, Impacts, and Harms In the context of",,,
+8,E,q19,1,E:NIST-AI-600-1:pdf:055:chunk:0004,NIST-AI-600-1,profile,55,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=55,Provenance data tracking techniques for GAI systems can,,,
+9,E,q24,1,E:NIST-AI-100-1:pdf:022:chunk:0004,NIST-AI-100-1,framework,22,https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf#page=22,be complex and difficult to define because perceptions,,,

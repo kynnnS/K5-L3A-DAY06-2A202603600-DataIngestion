@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from common import ROOT, ARTIFACTS, iter_jsonl, write_json, write_jsonl
 
 RESULTS = ROOT / 'results'
-STRATEGIES = 'ABC'
+STRATEGIES = 'ABCDE'
 TOP_K = 3
 
 
@@ -46,7 +46,7 @@ def main():
     model_name = ingest['embedding_model']
     encoder = SentenceTransformer(model_name)
     client = chromadb.PersistentClient(path=str(ARTIFACTS / 'chroma'))
-    questions = list(iter_jsonl(ROOT / 'benchmark' / 'questions.jsonl'))
+    questions = list(iter_jsonl(ROOT / 'benchmark' / 'questions.jsonl')) + list(iter_jsonl(ROOT / 'benchmark' / 'questions_test2.jsonl'))
     run_at = datetime.now(timezone.utc).isoformat()
 
     t0 = time.perf_counter()
@@ -59,7 +59,7 @@ def main():
         traces = []
         t1 = time.perf_counter()
         for q, vec in zip(questions, qvecs):
-            use_filter = strategy == 'C' and bool(q.get('filter'))
+            use_filter = strategy in ('C', 'E') and bool(q.get('filter'))
             opts = {'query_embeddings': [vec.tolist()], 'n_results': TOP_K,
                     'include': ['metadatas', 'documents', 'distances']}
             if use_filter:
@@ -85,8 +85,8 @@ def main():
         query_seconds = time.perf_counter() - t1
         write_jsonl(RESULTS / f'traces_{strategy}.jsonl', traces)
 
-        for split in ('dev', 'test', 'all'):
-            rows = [t for t in traces if split == 'all' or t['split'] == split]
+        for split in ('dev', 'test', 'test2', 'all'):
+            rows = [t for t in traces if (split == 'all' and t['split'] in ('dev', 'test')) or t['split'] == split]
             frows = [t for t in rows if t['filter_requested']]
             row = {'strategy': strategy, 'split': split,
                    'hit_at_1': ratio(rows, 'hit_at_1'),
