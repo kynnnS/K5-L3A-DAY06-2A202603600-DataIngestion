@@ -8,6 +8,8 @@ Bài lab cá nhân của học viên **2A202603600**. Pipeline biến hai tài l
 
 Đề bài gốc: [GUIDE.md](GUIDE.md), [BENCHMARK.md](BENCHMARK.md), [RUBRIC.md](RUBRIC.md), [RULES.md](RULES.md), [SUBMISSION.md](SUBMISSION.md). Báo cáo: [report/individual/2A202603600_NguyenVanNgocSon.md](report/individual/2A202603600_NguyenVanNgocSon.md).
 
+> **Code của bài nằm ở `src/` (thư mục gốc).** Thư mục `starter/` là khung pgvector có sẵn của đề, bài này không dùng (dùng Chroma thay thế). Các file trong `starter/src/` vẫn là TODO gốc.
+
 ## Setup
 
 Cần Python 3.12 (đã dùng 3.12.5) và mạng cho lần tải đầu (PDF, thư viện, model khoảng 470 MB). Không cần API key, không cần Docker.
