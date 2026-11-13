@@ -1,0 +1,597 @@
+strategy,question_id,question,expected_answer,gold,evidence_hit_at_3_auto,top3,label_0_2,reason
+A,q16,Why might AI systems need corrective maintenance more often than traditional software?,"Because of data, model, or concept drift.",NIST-AI-100-1 p43,False,"[1] NIST-AI-100-1 p6 (sim 0.697)
+e, may be trained on data that
+can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts
+in which they are deployed are frequently complex, making it difficult to detect and respond
+to failures when they occur. AI systems are inherently socio-technical in nature, meaning
+they are influenced by societal dynamics and human behavior. AI risks – and benefits –
+can emerge from the
+---
+[2] NIST-AI-100-1 p43 (sim 0.673)
+training may fundamentally alter AI system performance.
+• Datasets used to train AI systems may become detached from their original and intended context or may become stale or outdated relative to deployment context.
+• AI system scale and complexity (many systems contain billions or even trillions of
+decision points) housed within more traditional software applications.
+• Use of pre-trained models that can advance research and improve performance can
+also increase levels of statistical uncertai
+---
+[3] NIST-AI-100-1 p18 (sim 0.668)
+failure, for a given time interval, under given conditions” (Source: ISO/IEC TS
+5723:2022). Reliability is a goal for overall correctness of AI system operation under the
+conditions of expected use and over a given period of time, including the entire lifetime of
+the system.
+
+Page 13",,
+A,q17,What benefit related to deployment decisions are framework users expected to gain?,Explicit processes for making go/no-go system commissioning and deployment decisions.,NIST-AI-100-1 p24,False,"[1] NIST-AI-600-1 p26 (sim 0.566)
+rstood and documented. Considerations include: the specific set or types of users
+along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations,
+society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or
+product AI lifecycle; and related TEVV and system metrics.
+
+Action ID Suggested Action GAI Risks
+
+When identifying intended purposes, consider factors such as
+---
+[2] NIST-AI-100-1 p30 (sim 0.553)
+lications that may lead to negative impacts;
+• identifying known and foreseeable negative impacts related to intended use of AI
+systems; and
+• anticipating risks of the use of AI systems beyond intended use.
+
+After completing the MAP function, Framework users should have sufficient contextual
+knowledge about AI system impacts to inform an initial go/no-go decision about whether
+to design, develop, or deploy an AI system. If a decision is made to proceed, organizations
+should utilize the MEASURE
+---
+[3] NIST-AI-100-1 p36 (sim 0.545)
+or assessing emergent risks
+are in place, along with mechanisms for continual improvement.
+
+After completing the MANAGE function, plans for prioritizing risk and regular monitoring
+and improvement will be in place. Framework users will have enhanced capacity to manage the risks of deployed AI systems and to allocate risk management resources based on
+assessed and prioritized risks. It is incumbent on Framework users to continue to apply
+the MANAGE function to deployed AI systems as methods, cont",,
+A,q18,What does the Value Chain and Component Integration risk refer to?,"Non-transparent or untraceable integration of upstream third-party components (including improperly obtained or uncleaned data), improper supplier vetting, or other issues that reduce transparency or accountability for downstream users.",NIST-AI-600-1 p9,False,"[1] NIST-AI-600-1 p7 (sim 0.637)
+y
+the development and use of GAI are defined below.5 Each risk is labeled according to the outcome,
+object, or source of the risk (i.e., some are risks “to” a subject or domain and others are risks “of” or
+“from” an issue or theme). These risks provide a lens through which organizations can frame and execute
+risk management efforts. To help streamline risk management efforts, each risk is mapped in Section 3
+(as well as in tables in Appendix B) to relevant Trustworthy AI Characteristics identifi
+---
+[2] NIST-AI-100-1 p9 (sim 0.595)
+pacts, and Harms
+
+In the context of the AI RMF, risk refers to the composite measure of an event’s probability
+of occurring and the magnitude or degree of the consequences of the corresponding event.
+The impacts, or consequences, of AI systems can be positive, negative, or both and can
+result in opportunities or threats (Adapted from: ISO 31000:2018). When considering the
+negative impact of a potential event, risk is a function of 1) the negative impact, or magnitude of harm, that would arise if
+---
+[3] NIST-AI-600-1 p25 (sim 0.574)
+tems deemed to be
+high-risk.
+
+Action ID Suggested Action GAI Risks
+
+Document GAI risks associated with system value chain to identify over-reliance Value Chain and Component GV-6.2-001 on third-party data and to identify fallbacks. Integration
+
+Document incidents involving third-party GAI data and systems, including open- Intellectual Property; Value Chain GV-6.2-002 data and open-source software. and Component Integration
+
+21",,
+A,q19,What are some well-known techniques for provenance data tracking?,"Digital watermarking, metadata recording, digital fingerprinting, and human authentication.",NIST-AI-600-1 p55,True,"[1] NIST-AI-600-1 p55 (sim 0.850)
+The implementation of provenance data tracking techniques can
+help assess the authenticity, integrity, intellectual property rights, and potential manipulations in digital
+content. Some well-known techniques for provenance data tracking include digital watermarking,
+metadata recording, digital fingerprinting, and human authentication, among others.
+Provenance Data Tracking Approaches
+Provenance data tracking techniques for GAI systems can be used to track the history and origin of data
+inputs,
+---
+[2] NIST-AI-600-1 p55 (sim 0.766)
+d to track the history and origin of data
+inputs, metadata, and synthetic content. Provenance data tracking records the origin and history for
+digital content, allowing its authenticity to be determined. It consists of techniques to record metadata
+as well as overt and covert digital watermarks on content. Data provenance refers to tracking the origin
+and history of input data through metadata and digital watermarking techniques. Provenance data
+tracking processes can include and assist AI Actor
+---
+[3] NIST-AI-600-1 p55 (sim 0.642)
+on integrity, and uphold public trust. Provenance data tracking and synthetic
+content detection mechanisms provide information about the origin and history of content to assist in
+GAI risk management efforts.
+Provenance metadata can include information about GAI model developers or creators of GAI content,
+date/time of creation, location, modifications, and sources. Metadata can be tracked for text, images,
+videos, audio, and underlying datasets. The implementation of provenance data tracking te",,
+A,q20,"According to the Generative AI Profile, how is risk defined?",The composite measure of an event's probability (or likelihood) of occurring and the magnitude or degree of the consequences of the corresponding event.,NIST-AI-600-1 p6,False,"[1] NIST-AI-600-1 p7 (sim 0.787)
+y
+the development and use of GAI are defined below.5 Each risk is labeled according to the outcome,
+object, or source of the risk (i.e., some are risks “to” a subject or domain and others are risks “of” or
+“from” an issue or theme). These risks provide a lens through which organizations can frame and execute
+risk management efforts. To help streamline risk management efforts, each risk is mapped in Section 3
+(as well as in tables in Appendix B) to relevant Trustworthy AI Characteristics identifi
+---
+[2] NIST-AI-600-1 p7 (sim 0.774)
+o relevant Trustworthy AI Characteristics identified in the AI RMF.
+
+5 These risks can be further categorized by organizations depending on their unique approaches to risk definition
+and management. One possible way to further categorize these risks, derived in part from the UK’s International
+Scientific Report on the Safety of Advanced AI, could be: 1) Technical / Model risks (or risk from malfunction):
+Confabulation; Dangerous or Violent Recommendations; Data Privacy; Value Chain and Component
+---
+[3] NIST-AI-100-1 p44 (sim 0.759)
+the challenging risks related to generative AI;
+• comprehensively address security concerns related to evasion, model extraction, membership inference, availability, or other machine learning attacks;
+• account for the complex attack surface of AI systems or other security abuses enabled
+by AI systems; and
+• consider risks associated with third-party AI technologies, transfer learning, and offlabel use where AI systems may be trained for decision-making outside an organization’s security control",,
+A,q21,"In the AI RMF 1.0 framework document, what three major categories of AI bias has NIST identified?","Systemic, computational and statistical, and human-cognitive.",NIST-AI-100-1 p23,True,"[1] NIST-AI-100-1 p23 (sim 0.856)
+NIST AI 100-1 AI RMF 1.0
+
+Bias is broader than demographic balance and data representativeness. NIST has identified
+three major categories of AI bias to be considered and managed: systemic, computational
+and statistical, and human-cognitive. Each of these can occur in the absence of prejudice,
+partiality, or discriminatory intent. Systemic bias can be present in AI datasets, the organizational norms, practices, and processes across the AI lifecycle, and the broader society
+that uses AI systems.
+---
+[2] NIST-AI-100-1 p47 (sim 0.791)
+NIST AI 100-1 AI RMF 1.0
+
+Appendix D:
+Attributes of the AI RMF
+
+NIST described several key attributes of the AI RMF when work on the Framework first
+began. These attributes have remained intact and were used to guide the AI RMF’s development. They are provided here as a reference.
+
+The AI RMF strives to:
+
+1. Be risk-based, resource-efficient, pro-innovation, and voluntary.
+2. Be consensus-driven and developed and regularly updated through an open, transparent process. All stakeholders should hav
+---
+[3] NIST-AI-100-1 p8 (sim 0.766)
+NIST AI 100-1 AI RMF 1.0
+
+valid and reliable, safe, secure and resilient, accountable and transparent, explainable and
+interpretable, privacy enhanced, and fair with their harmful biases managed.
+
+Part 2 comprises the “Core” of the Framework. It describes four specific functions to help
+organizations address the risks of AI systems in practice. These functions – GOVERN,
+MAP, MEASURE, and MANAGE – are broken down further into categories and subcategories. While GOVERN applies to all stages of org",,
+B,q16,Why might AI systems need corrective maintenance more often than traditional software?,"Because of data, model, or concept drift.",NIST-AI-100-1 p43,False,"[1] NIST-AI-100-1 p23 (sim 0.684)
+ation, and maintenance of AI.
+
+Bias exists in many forms and can become ingrained in the automated systems that help
+make decisions about our lives. While bias is not always a negative phenomenon, AI systems can potentially increase the speed and scale of biases and perpetuate and amplify
+harms to individuals, groups, communities, organizations, and society. Bias is tightly associated with the concepts of transparency as well as fairness in society. (For more information about bias, including the three categories, see NIST Special Publication 1270, Towards
+a Standard for Identifying and Managing Bias in Artificial Intelligence.)
+
+Page 18
+---
+[2] NIST-AI-100-1 p19 (sim 0.679)
+Validity and reliability for deployed AI systems are often assessed by ongoing testing or
+monitoring that confirms a system is performing as intended. Measurement of validity,
+accuracy, robustness, and reliability contribute to trustworthiness and should take into consideration that certain types of failures can cause greater harm. AI risk management efforts
+should prioritize the minimization of potential negative impacts, and may need to include
+human intervention in cases where the AI system cannot detect or correct errors.
+
+3.2 Safe
+
+AI systems should “not under defined conditions, lead to a state in which human life,
+health, property, or the environment is endangered” (Source: ISO/IEC TS 5723:2022). Safe
+operation of AI systems is improved through:
+---
+[3] NIST-AI-100-1 p6 (sim 0.655)
+While there are myriad standards and best practices to help organizations mitigate the risks
+of traditional software or information-based systems, the risks posed by AI systems are in
+many ways unique (See Appendix B). AI systems, for example, may be trained on data that
+can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts
+in which they are deployed are frequently complex, making it difficult to detect and respond
+to failures when they occur. AI systems are inherently socio-technical in nature, meaning
+they are influenced by societal dynamics and human behavior. AI risks – and benefits –
+can emerge from the interplay of technical aspects combined with societal factors related
+to how a system is used, its interactions with other AI systems, who operates it, and the
+social context in which it is deployed.",,
+B,q17,What benefit related to deployment decisions are framework users expected to gain?,Explicit processes for making go/no-go system commissioning and deployment decisions.,NIST-AI-100-1 p24,False,"[1] NIST-AI-100-1 p30 (sim 0.552)
+After completing the MAP function, Framework users should have sufficient contextual
+knowledge about AI system impacts to inform an initial go/no-go decision about whether
+to design, develop, or deploy an AI system. If a decision is made to proceed, organizations
+should utilize the MEASURE and MANAGE functions along with policies and procedures
+put into place in the GOVERN function to assist in AI risk management efforts. It is incumbent on Framework users to continue applying the MAP function to AI systems as context,
+capabilities, risks, benefits, and potential impacts evolve over time.
+
+Practices related to mapping AI risks are described in the NIST AI RMF Playbook. Table
+2 lists the MAP function’s categories and subcategories.
+
+Page 25
+---
+[2] NIST-AI-100-1 p26 (sim 0.533)
+Framework users may apply these functions as best suits their needs for managing
+AI risks based on their resources and capabilities. Some organizations may choose
+to select from among the categories and subcategories; others may choose and have
+the capacity to apply all categories and subcategories. Assuming a governance structure is in place, functions may be performed in any order across the AI lifecycle as
+deemed to add value by a user of the framework. After instituting the outcomes in
+GOVERN, most users of the AI RMF would start with the MAP function and continue to MEASURE or MANAGE. However users integrate the functions, the process
+should be iterative, with cross-referencing between functions as necessary. Similarly, there are categories and subcategories with elements that apply to multiple
+functions, or that logically should take place before certain subcategory decisions.
+
+5.1 Govern
+
+The GOVERN function:
+---
+[3] NIST-AI-100-1 p20 (sim 0.531)
+This characteristic’s scope spans from design decisions and training data to model training, the structure of the model, its intended use cases, and how and when deployment,
+post-deployment, or end user decisions were made and by whom. Transparency is often
+necessary for actionable redress related to AI system outputs that are incorrect or otherwise
+lead to negative impacts. Transparency should consider human-AI interaction: for examPage 15",,
+B,q18,What does the Value Chain and Component Integration risk refer to?,"Non-transparent or untraceable integration of upstream third-party components (including improperly obtained or uncleaned data), improper supplier vetting, or other issues that reduce transparency or accountability for downstream users.",NIST-AI-600-1 p9,False,"[1] NIST-AI-100-1 p13 (sim 0.617)
+Residual risk – defined as risk remaining after risk treatment (Source: ISO GUIDE 73) –
+directly impacts end users or affected individuals and communities. Documenting residual
+risks will call for the system provider to fully consider the risks of deploying the AI product
+and will inform end users about potential negative impacts of interacting with the system.
+
+1.2.4 Organizational Integration and Management of Risk
+
+AI risks should not be considered in isolation. Different AI actors have different responsibilities and awareness depending on their roles in the lifecycle. For example, organizations
+developing an AI system often will not have information about how the system may be
+used. AI risk management should be integrated and incorporated into broader enterprise
+risk management strategies and processes. Treating AI risks along with other critical risks,
+such as cybersecurity and privacy, will yield a more integrated outcome and organizational
+efficiencies.
+---
+[2] NIST-AI-600-1 p7 (sim 0.610)
+5 These risks can be further categorized by organizations depending on their unique approaches to risk definition
+and management. One possible way to further categorize these risks, derived in part from the UK’s International
+Scientific Report on the Safety of Advanced AI, could be: 1) Technical / Model risks (or risk from malfunction):
+Confabulation; Dangerous or Violent Recommendations; Data Privacy; Value Chain and Component Integration;
+Harmful Bias, and Homogenization; 2) Misuse by humans (or malicious use): CBRN Information or Capabilities;
+Data Privacy; Human-AI Configuration; Obscene, Degrading, and/or Abusive Content; Information Integrity;
+Information Security; 3) Ecosystem / societal risks (or systemic risks): Data Privacy; Environmental; Intellectual
+Property. We also note that some risks are cross-cutting between these categories.
+
+3
+---
+[3] NIST-AI-100-1 p9 (sim 0.581)
+In the context of the AI RMF, risk refers to the composite measure of an event’s probability
+of occurring and the magnitude or degree of the consequences of the corresponding event.
+The impacts, or consequences, of AI systems can be positive, negative, or both and can
+result in opportunities or threats (Adapted from: ISO 31000:2018). When considering the
+negative impact of a potential event, risk is a function of 1) the negative impact, or magnitude of harm, that would arise if the circumstance or event occurs and 2) the likelihood of
+occurrence (Adapted from: OMB Circular A-130:2016). Negative impact or harm can be
+experienced by individuals, groups, communities, organizations, society, the environment,
+and the planet.
+
+“Risk management refers to coordinated activities to direct and control an organization with regard to risk” (Source: ISO 31000:2018).",,
+B,q19,What are some well-known techniques for provenance data tracking?,"Digital watermarking, metadata recording, digital fingerprinting, and human authentication.",NIST-AI-600-1 p55,True,"[1] NIST-AI-600-1 p55 (sim 0.706)
+ll as overt and covert digital watermarks on content. Data provenance refers to tracking the origin
+and history of input data through metadata and digital watermarking techniques. Provenance data
+tracking processes can include and assist AI Actors across the lifecycle who may not have full visibility or
+control over the various trade-offs and cascading impacts of early-stage model decisions on downstream
+performance and synthetic outputs. For example, by selecting a watermarking model to prioritize
+robustness (the durability of a watermark), an AI actor may inadvertently diminish computational
+complexity (the resources required to implement watermarking). Organizational risk management
+efforts for enhancing content provenance include:
+• Tracking provenance of training data and metadata for GAI systems;
+• Documenting provenance data limitations within GAI systems;
+
+51
+---
+[2] NIST-AI-600-1 p55 (sim 0.577)
+y of content to assist in
+GAI risk management efforts.
+Provenance metadata can include information about GAI model developers or creators of GAI content,
+date/time of creation, location, modifications, and sources. Metadata can be tracked for text, images,
+videos, audio, and underlying datasets. The implementation of provenance data tracking techniques can
+help assess the authenticity, integrity, intellectual property rights, and potential manipulations in digital
+content. Some well-known techniques for provenance data tracking include digital watermarking,
+metadata recording, digital fingerprinting, and human authentication, among others.
+Provenance Data Tracking Approaches
+Provenance data tracking techniques for GAI systems can be used to track the history and origin of data
+inputs, metadata, and synthetic content. Provenance data tracking records the origin and history for
+digital content, allowing its authenticity to be determined. It consists of techniques to record metadata
+as we
+---
+[3] NIST-AI-600-1 p56 (sim 0.542)
+• Monitoring system capabilities and limitations in deployment through rigorous TEVV processes;
+• Evaluating how humans engage, interact with, or adapt to GAI content (especially in decision
+making tasks informed by GAI content), and how they react to applied provenance techniques
+such as overt disclosures.
+Organizations can document and delineate GAI system objectives and limitations to identify gaps where
+provenance data may be most useful. For instance, GAI systems used for content creation may require
+robust watermarking techniques and corresponding detectors to identify the source of content or
+metadata recording techniques and metadata management tools and repositories to trace content
+origins and modifications. Further narrowing of GAI task definitions to include provenance data can
+enable organizations to maximize the utility of provenance data and risk management efforts.
+
+A.1.7. Enhancing Content Provenance through Structured Public Feedback",,
+B,q20,"According to the Generative AI Profile, how is risk defined?",The composite measure of an event's probability (or likelihood) of occurring and the magnitude or degree of the consequences of the corresponding event.,NIST-AI-600-1 p6,True,"[1] NIST-AI-600-1 p7 (sim 0.790)
+5 These risks can be further categorized by organizations depending on their unique approaches to risk definition
+and management. One possible way to further categorize these risks, derived in part from the UK’s International
+Scientific Report on the Safety of Advanced AI, could be: 1) Technical / Model risks (or risk from malfunction):
+Confabulation; Dangerous or Violent Recommendations; Data Privacy; Value Chain and Component Integration;
+Harmful Bias, and Homogenization; 2) Misuse by humans (or malicious use): CBRN Information or Capabilities;
+Data Privacy; Human-AI Configuration; Obscene, Degrading, and/or Abusive Content; Information Integrity;
+Information Security; 3) Ecosystem / societal risks (or systemic risks): Data Privacy; Environmental; Intellectual
+Property. We also note that some risks are cross-cutting between these categories.
+
+3
+---
+[2] NIST-AI-600-1 p6 (sim 0.760)
+In the context of the AI RMF, risk refers to the composite measure of an event’s probability (or
+likelihood) of occurring and the magnitude or degree of the consequences of the corresponding event.
+Some risks can be assessed as likely to materialize in a given context, particularly those that have been
+empirically demonstrated in similar contexts. Other risks may be unlikely to materialize in a given
+context, or may be more speculative and therefore uncertain.
+AI risks can differ from or intensify traditional software risks. Likewise, GAI can exacerbate existing AI
+risks, and creates unique risks. GAI risks can vary along many dimensions:
+• Stage of the AI lifecycle: Risks can arise during design, development, deployment, operation,
+and/or decommissioning.
+• Scope: Risks may exist at individual model or system levels, at the application or implementation
+levels (i.e., for a specific use case), or at the ecosystem level – that is, beyond a single system or
+organizational context. Exampl
+---
+[3] NIST-AI-100-1 p47 (sim 0.759)
+iness and uses of AI change and as stakeholders learn from implementing AI risk management generally and this framework
+in particular.
+
+Page 42",,
+B,q21,"In the AI RMF 1.0 framework document, what three major categories of AI bias has NIST identified?","Systemic, computational and statistical, and human-cognitive.",NIST-AI-100-1 p23,True,"[1] NIST-AI-100-1 p23 (sim 0.766)
+Bias is broader than demographic balance and data representativeness. NIST has identified
+three major categories of AI bias to be considered and managed: systemic, computational
+and statistical, and human-cognitive. Each of these can occur in the absence of prejudice,
+partiality, or discriminatory intent. Systemic bias can be present in AI datasets, the organizational norms, practices, and processes across the AI lifecycle, and the broader society
+that uses AI systems. Computational and statistical biases can be present in AI datasets
+and algorithmic processes, and often stem from systematic errors due to non-representative
+samples. Human-cognitive biases relate to how an individual or group perceives AI system information to make a decision or fill in missing information, or how humans think
+about purposes and functions of an AI system. Human-cognitive biases are omnipresent
+in decision-making processes across the AI lifecycle and system use, including the design,
+implementation, oper
+---
+[2] NIST-AI-100-1 p8 (sim 0.765)
+NIST AI 100-1 AI RMF 1.0
+
+valid and reliable, safe, secure and resilient, accountable and transparent, explainable and
+interpretable, privacy enhanced, and fair with their harmful biases managed.
+
+Part 2 comprises the “Core” of the Framework. It describes four specific functions to help
+organizations address the risks of AI systems in practice. These functions – GOVERN,
+MAP, MEASURE, and MANAGE – are broken down further into categories and subcategories. While GOVERN applies to all stages of organizations’ AI risk management processes and procedures, the MAP, MEASURE, and MANAGE functions can be applied in AI
+system-specific contexts and at specific stages of the AI lifecycle.
+
+Additional resources related to the Framework are included in the AI RMF Playbook,
+which is available via the NIST AI RMF website:
+https://www.nist.gov/itl/ai-risk-management-framework.
+---
+[3] NIST-AI-100-1 p47 (sim 0.759)
+NIST AI 100-1 AI RMF 1.0
+
+Appendix D:
+Attributes of the AI RMF
+
+NIST described several key attributes of the AI RMF when work on the Framework first
+began. These attributes have remained intact and were used to guide the AI RMF’s development. They are provided here as a reference.
+
+The AI RMF strives to:",,
+C,q16,Why might AI systems need corrective maintenance more often than traditional software?,"Because of data, model, or concept drift.",NIST-AI-100-1 p43,False,"[1] NIST-AI-100-1 p23 (sim 0.684)
+ation, and maintenance of AI.
+
+Bias exists in many forms and can become ingrained in the automated systems that help
+make decisions about our lives. While bias is not always a negative phenomenon, AI systems can potentially increase the speed and scale of biases and perpetuate and amplify
+harms to individuals, groups, communities, organizations, and society. Bias is tightly associated with the concepts of transparency as well as fairness in society. (For more information about bias, including the three categories, see NIST Special Publication 1270, Towards
+a Standard for Identifying and Managing Bias in Artificial Intelligence.)
+
+Page 18
+---
+[2] NIST-AI-100-1 p19 (sim 0.679)
+Validity and reliability for deployed AI systems are often assessed by ongoing testing or
+monitoring that confirms a system is performing as intended. Measurement of validity,
+accuracy, robustness, and reliability contribute to trustworthiness and should take into consideration that certain types of failures can cause greater harm. AI risk management efforts
+should prioritize the minimization of potential negative impacts, and may need to include
+human intervention in cases where the AI system cannot detect or correct errors.
+
+3.2 Safe
+
+AI systems should “not under defined conditions, lead to a state in which human life,
+health, property, or the environment is endangered” (Source: ISO/IEC TS 5723:2022). Safe
+operation of AI systems is improved through:
+---
+[3] NIST-AI-100-1 p6 (sim 0.655)
+While there are myriad standards and best practices to help organizations mitigate the risks
+of traditional software or information-based systems, the risks posed by AI systems are in
+many ways unique (See Appendix B). AI systems, for example, may be trained on data that
+can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts
+in which they are deployed are frequently complex, making it difficult to detect and respond
+to failures when they occur. AI systems are inherently socio-technical in nature, meaning
+they are influenced by societal dynamics and human behavior. AI risks – and benefits –
+can emerge from the interplay of technical aspects combined with societal factors related
+to how a system is used, its interactions with other AI systems, who operates it, and the
+social context in which it is deployed.",,
+C,q17,What benefit related to deployment decisions are framework users expected to gain?,Explicit processes for making go/no-go system commissioning and deployment decisions.,NIST-AI-100-1 p24,False,"[1] NIST-AI-100-1 p30 (sim 0.552)
+After completing the MAP function, Framework users should have sufficient contextual
+knowledge about AI system impacts to inform an initial go/no-go decision about whether
+to design, develop, or deploy an AI system. If a decision is made to proceed, organizations
+should utilize the MEASURE and MANAGE functions along with policies and procedures
+put into place in the GOVERN function to assist in AI risk management efforts. It is incumbent on Framework users to continue applying the MAP function to AI systems as context,
+capabilities, risks, benefits, and potential impacts evolve over time.
+
+Practices related to mapping AI risks are described in the NIST AI RMF Playbook. Table
+2 lists the MAP function’s categories and subcategories.
+
+Page 25
+---
+[2] NIST-AI-100-1 p26 (sim 0.533)
+Framework users may apply these functions as best suits their needs for managing
+AI risks based on their resources and capabilities. Some organizations may choose
+to select from among the categories and subcategories; others may choose and have
+the capacity to apply all categories and subcategories. Assuming a governance structure is in place, functions may be performed in any order across the AI lifecycle as
+deemed to add value by a user of the framework. After instituting the outcomes in
+GOVERN, most users of the AI RMF would start with the MAP function and continue to MEASURE or MANAGE. However users integrate the functions, the process
+should be iterative, with cross-referencing between functions as necessary. Similarly, there are categories and subcategories with elements that apply to multiple
+functions, or that logically should take place before certain subcategory decisions.
+
+5.1 Govern
+
+The GOVERN function:
+---
+[3] NIST-AI-100-1 p20 (sim 0.531)
+This characteristic’s scope spans from design decisions and training data to model training, the structure of the model, its intended use cases, and how and when deployment,
+post-deployment, or end user decisions were made and by whom. Transparency is often
+necessary for actionable redress related to AI system outputs that are incorrect or otherwise
+lead to negative impacts. Transparency should consider human-AI interaction: for examPage 15",,
+C,q18,What does the Value Chain and Component Integration risk refer to?,"Non-transparent or untraceable integration of upstream third-party components (including improperly obtained or uncleaned data), improper supplier vetting, or other issues that reduce transparency or accountability for downstream users.",NIST-AI-600-1 p9,False,"[1] NIST-AI-100-1 p13 (sim 0.617)
+Residual risk – defined as risk remaining after risk treatment (Source: ISO GUIDE 73) –
+directly impacts end users or affected individuals and communities. Documenting residual
+risks will call for the system provider to fully consider the risks of deploying the AI product
+and will inform end users about potential negative impacts of interacting with the system.
+
+1.2.4 Organizational Integration and Management of Risk
+
+AI risks should not be considered in isolation. Different AI actors have different responsibilities and awareness depending on their roles in the lifecycle. For example, organizations
+developing an AI system often will not have information about how the system may be
+used. AI risk management should be integrated and incorporated into broader enterprise
+risk management strategies and processes. Treating AI risks along with other critical risks,
+such as cybersecurity and privacy, will yield a more integrated outcome and organizational
+efficiencies.
+---
+[2] NIST-AI-600-1 p7 (sim 0.610)
+5 These risks can be further categorized by organizations depending on their unique approaches to risk definition
+and management. One possible way to further categorize these risks, derived in part from the UK’s International
+Scientific Report on the Safety of Advanced AI, could be: 1) Technical / Model risks (or risk from malfunction):
+Confabulation; Dangerous or Violent Recommendations; Data Privacy; Value Chain and Component Integration;
+Harmful Bias, and Homogenization; 2) Misuse by humans (or malicious use): CBRN Information or Capabilities;
+Data Privacy; Human-AI Configuration; Obscene, Degrading, and/or Abusive Content; Information Integrity;
+Information Security; 3) Ecosystem / societal risks (or systemic risks): Data Privacy; Environmental; Intellectual
+Property. We also note that some risks are cross-cutting between these categories.
+
+3
+---
+[3] NIST-AI-100-1 p9 (sim 0.581)
+In the context of the AI RMF, risk refers to the composite measure of an event’s probability
+of occurring and the magnitude or degree of the consequences of the corresponding event.
+The impacts, or consequences, of AI systems can be positive, negative, or both and can
+result in opportunities or threats (Adapted from: ISO 31000:2018). When considering the
+negative impact of a potential event, risk is a function of 1) the negative impact, or magnitude of harm, that would arise if the circumstance or event occurs and 2) the likelihood of
+occurrence (Adapted from: OMB Circular A-130:2016). Negative impact or harm can be
+experienced by individuals, groups, communities, organizations, society, the environment,
+and the planet.
+
+“Risk management refers to coordinated activities to direct and control an organization with regard to risk” (Source: ISO 31000:2018).",,
+C,q19,What are some well-known techniques for provenance data tracking?,"Digital watermarking, metadata recording, digital fingerprinting, and human authentication.",NIST-AI-600-1 p55,True,"[1] NIST-AI-600-1 p55 (sim 0.706)
+ll as overt and covert digital watermarks on content. Data provenance refers to tracking the origin
+and history of input data through metadata and digital watermarking techniques. Provenance data
+tracking processes can include and assist AI Actors across the lifecycle who may not have full visibility or
+control over the various trade-offs and cascading impacts of early-stage model decisions on downstream
+performance and synthetic outputs. For example, by selecting a watermarking model to prioritize
+robustness (the durability of a watermark), an AI actor may inadvertently diminish computational
+complexity (the resources required to implement watermarking). Organizational risk management
+efforts for enhancing content provenance include:
+• Tracking provenance of training data and metadata for GAI systems;
+• Documenting provenance data limitations within GAI systems;
+
+51
+---
+[2] NIST-AI-600-1 p55 (sim 0.577)
+y of content to assist in
+GAI risk management efforts.
+Provenance metadata can include information about GAI model developers or creators of GAI content,
+date/time of creation, location, modifications, and sources. Metadata can be tracked for text, images,
+videos, audio, and underlying datasets. The implementation of provenance data tracking techniques can
+help assess the authenticity, integrity, intellectual property rights, and potential manipulations in digital
+content. Some well-known techniques for provenance data tracking include digital watermarking,
+metadata recording, digital fingerprinting, and human authentication, among others.
+Provenance Data Tracking Approaches
+Provenance data tracking techniques for GAI systems can be used to track the history and origin of data
+inputs, metadata, and synthetic content. Provenance data tracking records the origin and history for
+digital content, allowing its authenticity to be determined. It consists of techniques to record metadata
+as we
+---
+[3] NIST-AI-600-1 p56 (sim 0.542)
+• Monitoring system capabilities and limitations in deployment through rigorous TEVV processes;
+• Evaluating how humans engage, interact with, or adapt to GAI content (especially in decision
+making tasks informed by GAI content), and how they react to applied provenance techniques
+such as overt disclosures.
+Organizations can document and delineate GAI system objectives and limitations to identify gaps where
+provenance data may be most useful. For instance, GAI systems used for content creation may require
+robust watermarking techniques and corresponding detectors to identify the source of content or
+metadata recording techniques and metadata management tools and repositories to trace content
+origins and modifications. Further narrowing of GAI task definitions to include provenance data can
+enable organizations to maximize the utility of provenance data and risk management efforts.
+
+A.1.7. Enhancing Content Provenance through Structured Public Feedback",,
+C,q20,"According to the Generative AI Profile, how is risk defined?",The composite measure of an event's probability (or likelihood) of occurring and the magnitude or degree of the consequences of the corresponding event.,NIST-AI-600-1 p6,True,"[1] NIST-AI-600-1 p7 (sim 0.790)
+5 These risks can be further categorized by organizations depending on their unique approaches to risk definition
+and management. One possible way to further categorize these risks, derived in part from the UK’s International
+Scientific Report on the Safety of Advanced AI, could be: 1) Technical / Model risks (or risk from malfunction):
+Confabulation; Dangerous or Violent Recommendations; Data Privacy; Value Chain and Component Integration;
+Harmful Bias, and Homogenization; 2) Misuse by humans (or malicious use): CBRN Information or Capabilities;
+Data Privacy; Human-AI Configuration; Obscene, Degrading, and/or Abusive Content; Information Integrity;
+Information Security; 3) Ecosystem / societal risks (or systemic risks): Data Privacy; Environmental; Intellectual
+Property. We also note that some risks are cross-cutting between these categories.
+
+3
+---
+[2] NIST-AI-600-1 p6 (sim 0.760)
+In the context of the AI RMF, risk refers to the composite measure of an event’s probability (or
+likelihood) of occurring and the magnitude or degree of the consequences of the corresponding event.
+Some risks can be assessed as likely to materialize in a given context, particularly those that have been
+empirically demonstrated in similar contexts. Other risks may be unlikely to materialize in a given
+context, or may be more speculative and therefore uncertain.
+AI risks can differ from or intensify traditional software risks. Likewise, GAI can exacerbate existing AI
+risks, and creates unique risks. GAI risks can vary along many dimensions:
+• Stage of the AI lifecycle: Risks can arise during design, development, deployment, operation,
+and/or decommissioning.
+• Scope: Risks may exist at individual model or system levels, at the application or implementation
+levels (i.e., for a specific use case), or at the ecosystem level – that is, beyond a single system or
+organizational context. Exampl
+---
+[3] NIST-AI-600-1 p44 (sim 0.716)
+MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and
+documented. Risk response options can include mitigating, transferring, avoiding, or accepting.
+
+Action ID Suggested Action GAI Risks
+
+Document trade-offs, decision processes, and relevant measurement and
+feedback results for risks that do not surpass organizational risk tolerance, for
+example, in the context of model release: Consider different approaches for MG-1.3-001 Information Security model release, for example, leveraging a staged release approach. Consider
+release approaches in the context of the model and its projected use cases.
+Mitigate, transfer, or avoid risks that surpass organizational risk tolerances.
+
+Monitor the robustness and effectiveness of risk controls and mitigation plans
+MG-1.3-002 (e.g., via red-teaming, field testing, participatory engagements, performance Human-AI Configuration
+assessments, user feedback mechanisms).",,
+C,q21,"In the AI RMF 1.0 framework document, what three major categories of AI bias has NIST identified?","Systemic, computational and statistical, and human-cognitive.",NIST-AI-100-1 p23,True,"[1] NIST-AI-100-1 p23 (sim 0.766)
+Bias is broader than demographic balance and data representativeness. NIST has identified
+three major categories of AI bias to be considered and managed: systemic, computational
+and statistical, and human-cognitive. Each of these can occur in the absence of prejudice,
+partiality, or discriminatory intent. Systemic bias can be present in AI datasets, the organizational norms, practices, and processes across the AI lifecycle, and the broader society
+that uses AI systems. Computational and statistical biases can be present in AI datasets
+and algorithmic processes, and often stem from systematic errors due to non-representative
+samples. Human-cognitive biases relate to how an individual or group perceives AI system information to make a decision or fill in missing information, or how humans think
+about purposes and functions of an AI system. Human-cognitive biases are omnipresent
+in decision-making processes across the AI lifecycle and system use, including the design,
+implementation, oper
+---
+[2] NIST-AI-100-1 p8 (sim 0.765)
+NIST AI 100-1 AI RMF 1.0
+
+valid and reliable, safe, secure and resilient, accountable and transparent, explainable and
+interpretable, privacy enhanced, and fair with their harmful biases managed.
+
+Part 2 comprises the “Core” of the Framework. It describes four specific functions to help
+organizations address the risks of AI systems in practice. These functions – GOVERN,
+MAP, MEASURE, and MANAGE – are broken down further into categories and subcategories. While GOVERN applies to all stages of organizations’ AI risk management processes and procedures, the MAP, MEASURE, and MANAGE functions can be applied in AI
+system-specific contexts and at specific stages of the AI lifecycle.
+
+Additional resources related to the Framework are included in the AI RMF Playbook,
+which is available via the NIST AI RMF website:
+https://www.nist.gov/itl/ai-risk-management-framework.
+---
+[3] NIST-AI-100-1 p47 (sim 0.759)
+NIST AI 100-1 AI RMF 1.0
+
+Appendix D:
+Attributes of the AI RMF
+
+NIST described several key attributes of the AI RMF when work on the Framework first
+began. These attributes have remained intact and were used to guide the AI RMF’s development. They are provided here as a reference.
+
+The AI RMF strives to:",,

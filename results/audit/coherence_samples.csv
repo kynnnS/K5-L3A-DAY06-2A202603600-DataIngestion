@@ -1,0 +1,270 @@
+strategy,position_id,page_id,char_offset,chunk_id,covering_chunks,span_method,chunk_chars,chunk_text,label_0_2,reason
+A,pos01,NIST-AI-100-1:pdf:006,1547,A:NIST-AI-100-1:pdf:006:chunk:0003,1,exact,500,"e, may be trained on data that
+can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts
+in which they are deployed are frequently complex, making it difficult to detect and respond
+to failures when they occur. AI systems are inherently socio-technical in nature, meaning
+they are influenced by societal dynamics and human behavior. AI risks – and benefits –
+can emerge from the",,
+A,pos02,NIST-AI-100-1:pdf:017,1319,A:NIST-AI-100-1:pdf:017:chunk:0002,1,exact,500,"ting. Neglecting these characteristics can increase the
+probability and magnitude of negative consequences.
+
+Fig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of
+trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable &
+Transparent is shown as a vertical box because it relates to all other characteristics.
+
+Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and organizational behav",,
+A,pos03,NIST-AI-100-1:pdf:027,1218,A:NIST-AI-100-1:pdf:027:chunk:0002,1,exact,500,"ns. Documentation can enhance transparency, improve human review processes,
+and bolster accountability in AI system teams.
+
+After putting in place the structures, systems, processes, and teams described in the GOVERN function, organizations should benefit from a purpose-driven culture focused on risk
+understanding and management. It is incumbent on Framework users to continue to execute the GOVERN function as knowledge, cultures, and needs or expectations from AI
+actors evolve over time.
+
+Practi",,
+A,pos04,NIST-AI-100-1:pdf:037,1131,A:NIST-AI-100-1:pdf:037:chunk:0002,1,exact,499,"oiding, or accepting.
+managed.
+MANAGE 1.4: Negative residual risks (defined as the sum of all
+unmitigated risks) to both downstream acquirers of AI systems
+and end users are documented.
+
+MANAGE 2: MANAGE 2.1: Resources required to manage AI risks are taken
+Strategies to into account – along with viable non-AI alternative systems, apmaximize AI proaches, or methods – to reduce the magnitude or likelihood of
+benefits and potential impacts.
+minimize negative MANAGE 2.2: Mechanisms are in place and",,
+A,pos05,NIST-AI-600-1:pdf:005,1364,A:NIST-AI-600-1:pdf:005:chunk:0002,2,exact,499,"goals, considers legal/regulatory
+requirements and best practices, and reflects risk management priorities. Consistent with other AI RMF
+profiles, this profile offers insights into how risk can be managed across various stages of the AI lifecycle
+and for GAI as a technology.
+As GAI covers risks of models or applications that can be used across use cases or sectors, this document
+is an AI RMF cross-sectoral profile. Cross-sectoral profiles can be used to govern, map, measure, and
+manage risks as",,
+A,pos06,NIST-AI-600-1:pdf:016,1457,A:NIST-AI-600-1:pdf:016:chunk:0003,1,exact,498,"ss.
+For example, test datasets commonly used to benchmark or validate models can contain label errors.
+Inaccuracies in these labels can impact the “stability” or robustness of these benchmarks, which many
+GAI practitioners consider during the model selection process.
+Trustworthy AI Characteristics: Accountable and Transparent, Explainable and Interpretable, Fair with
+Harmful Bias Managed, Privacy Enhanced, Safe, Secure and Resilient, Valid and Reliable
+
+3. Suggested Actions to Manage GAI Risks",,
+A,pos07,NIST-AI-600-1:pdf:026,1478,A:NIST-AI-600-1:pdf:026:chunk:0003,1,exact,500,"ms that may amplify or
+defer liability in unexpected ways and/or contribute to unauthorized data
+collection by vendors or third-parties (e.g., secondary data use). Consider: Clear Human-AI Configuration;
+GV-6.2-007 assignment of liability and responsibility for incidents, GAI system changes over Information Security; Value Chain
+time (e.g., fine-tuning, drift, decay); Request: Notification and disclosure for and Component Integration
+serious incidents arising from third-party data and systems; S",,
+A,pos08,NIST-AI-600-1:pdf:036,1206,A:NIST-AI-600-1:pdf:036:chunk:0002,1,exact,500,"ty infringement, Data Privacy; Intellectual Property;
+data privacy violations, obscenity, extremism, violence, or CBRN information in Obscene, Degrading, and/or
+system training data. Abusive Content; Harmful Bias and MS-2.6-002 Homogenization; Dangerous,
+Violent, or Hateful Content; CBRN
+Information or Capabilities
+
+Re-evaluate safety features of fine-tuned models when the negative risk exceeds Dangerous, Violent, or Hateful MS-2.6-003 organizational risk tolerance. Content
+
+Value Chain and Comp",,
+A,pos09,NIST-AI-600-1:pdf:046,1329,A:NIST-AI-600-1:pdf:046:chunk:0002,1,exact,500,"ed and
+documented.
+
+Action ID Suggested Action GAI Risks
+
+Apply organizational risk tolerances and controls (e.g., acquisition and
+procurement processes; assessing personnel credentials and qualifications,
+performing background checks; filtering GAI input and outputs, grounding, fine
+tuning, retrieval-augmented generation) to third-party GAI resources: Apply Value Chain and Component MG-3.1-001 organizational risk tolerance to the utilization of third-party datasets and other Integration; Intell",,
+A,pos10,NIST-AI-600-1:pdf:057,712,A:NIST-AI-600-1:pdf:057:chunk:0001,1,exact,500,"better understand previous incidents
+and implement measures to prevent similar ones in the future, organizations could consider developing
+guidelines for publicly available incident reporting which include information about AI actor
+responsibilities. These guidelines would help AI system operators identify GAI incidents across the AI
+lifecycle and with AI Actors regardless of role. Documentation and review of third-party inputs and
+plugins for GAI systems is especially important for AI Actors in",,
+B,pos01,NIST-AI-100-1:pdf:006,1547,B:NIST-AI-100-1:pdf:006:chunk:0002,1,exact,941,"While there are myriad standards and best practices to help organizations mitigate the risks
+of traditional software or information-based systems, the risks posed by AI systems are in
+many ways unique (See Appendix B). AI systems, for example, may be trained on data that
+can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts
+in which they are deployed are frequently complex, making it difficult to detect and respond
+to failures when they occur. AI systems are inherently socio-technical in nature, meaning
+they are influenced by societal dynamics and human behavior. AI risks – and benefits –
+can emerge from the interplay of technical aspects combined with societal factors related
+to how a system is used, its interactions with other AI systems, who operates it, and the
+social context in which it is deployed.",,
+B,pos02,NIST-AI-100-1:pdf:017,1319,B:NIST-AI-100-1:pdf:017:chunk:0002,1,exact,777,"Fig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of
+trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable &
+Transparent is shown as a vertical box because it relates to all other characteristics.
+
+Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and organizational behavior, the datasets used by AI systems, selection of AI models and algorithms
+and the decisions made by those who build them, and the interactions with the humans who
+provide insight from and oversight of such systems. Human judgment should be employed
+when deciding on the specific metrics related to AI trustworthiness characteristics and the
+precise threshold values for those metrics.",,
+B,pos03,NIST-AI-100-1:pdf:027,1218,B:NIST-AI-100-1:pdf:027:chunk:0001,1,exact,947,"Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that
+direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational
+culture. Management aligns the technical aspects of AI risk management to policies and
+operations. Documentation can enhance transparency, improve human review processes,
+and bolster accountability in AI system teams.
+
+After putting in place the structures, systems, processes, and teams described in the GOVERN function, organizations should benefit from a purpose-driven culture focused on risk
+understanding and management. It is incumbent on Framework users to continue to execute the GOVERN function as knowledge, cultures, and needs or expectations from AI
+actors evolve over time.",,
+B,pos04,NIST-AI-100-1:pdf:037,1131,B:NIST-AI-100-1:pdf:037:chunk:0002,1,exact,806,"MANAGE 2: MANAGE 2.1: Resources required to manage AI risks are taken
+Strategies to into account – along with viable non-AI alternative systems, apmaximize AI proaches, or methods – to reduce the magnitude or likelihood of
+benefits and potential impacts.
+minimize negative MANAGE 2.2: Mechanisms are in place and applied to sustain
+impacts are planned, the value of deployed AI systems.
+prepared,
+MANAGE 2.3: Procedures are followed to respond to and recover
+implemented,
+from a previously unknown risk when it is identified.
+documented, and
+informed by input MANAGE 2.4: Mechanisms are in place and applied, and responfrom relevant AI sibilities are assigned and understood, to supersede, disengage, or
+actors. deactivate AI systems that demonstrate performance or outcomes
+inconsistent with intended use.",,
+B,pos05,NIST-AI-600-1:pdf:005,1364,B:NIST-AI-600-1:pdf:005:chunk:0002,1,exact,782,"nt with other AI RMF
+profiles, this profile offers insights into how risk can be managed across various stages of the AI lifecycle
+and for GAI as a technology.
+As GAI covers risks of models or applications that can be used across use cases or sectors, this document
+is an AI RMF cross-sectoral profile. Cross-sectoral profiles can be used to govern, map, measure, and
+manage risks associated with activities or business processes common across sectors, such as the use of
+large language models (LLMs), cloud-based services, or acquisition.
+This document defines risks that are novel to or exacerbated by the use of GAI. After introducing and
+describing these risks, the document provides a set of suggested actions to help organizations govern,
+map, measure, and manage these risks.",,
+B,pos06,NIST-AI-600-1:pdf:016,1457,B:NIST-AI-600-1:pdf:016:chunk:0002,1,exact,421,"can contain label errors.
+Inaccuracies in these labels can impact the “stability” or robustness of these benchmarks, which many
+GAI practitioners consider during the model selection process.
+Trustworthy AI Characteristics: Accountable and Transparent, Explainable and Interpretable, Fair with
+Harmful Bias Managed, Privacy Enhanced, Safe, Secure and Resilient, Valid and Reliable
+
+3. Suggested Actions to Manage GAI Risks",,
+B,pos07,NIST-AI-600-1:pdf:026,1478,B:NIST-AI-600-1:pdf:026:chunk:0002,1,exact,859,"Review vendor contracts and avoid arbitrary or capricious termination of critical
+GAI technologies or vendor services and non-standard terms that may amplify or
+defer liability in unexpected ways and/or contribute to unauthorized data
+collection by vendors or third-parties (e.g., secondary data use). Consider: Clear Human-AI Configuration;
+GV-6.2-007 assignment of liability and responsibility for incidents, GAI system changes over Information Security; Value Chain
+time (e.g., fine-tuning, drift, decay); Request: Notification and disclosure for and Component Integration
+serious incidents arising from third-party data and systems; Service Level
+Agreements (SLAs) in vendor contracts that address incident response, response
+times, and availability of critical support.
+
+AI Actor Tasks: AI Deployment, Operation and Monitoring, TEVV, Third-party entities",,
+B,pos08,NIST-AI-600-1:pdf:036,1206,B:NIST-AI-600-1:pdf:036:chunk:0001,1,exact,779,"Assess existence or levels of harmful bias, intellectual property infringement, Data Privacy; Intellectual Property;
+data privacy violations, obscenity, extremism, violence, or CBRN information in Obscene, Degrading, and/or
+system training data. Abusive Content; Harmful Bias and MS-2.6-002 Homogenization; Dangerous,
+Violent, or Hateful Content; CBRN
+Information or Capabilities
+
+Re-evaluate safety features of fine-tuned models when the negative risk exceeds Dangerous, Violent, or Hateful MS-2.6-003 organizational risk tolerance. Content
+
+Value Chain and Component Review GAI system outputs for validity and safety: Review generated code to MS-2.6-004 Integration; Dangerous, Violent, or assess risks that may arise from unreliable downstream decision-making. Hateful Content",,
+B,pos09,NIST-AI-600-1:pdf:046,1329,B:NIST-AI-600-1:pdf:046:chunk:0001,1,exact,703,"Apply organizational risk tolerances and controls (e.g., acquisition and
+procurement processes; assessing personnel credentials and qualifications,
+performing background checks; filtering GAI input and outputs, grounding, fine
+tuning, retrieval-augmented generation) to third-party GAI resources: Apply Value Chain and Component MG-3.1-001 organizational risk tolerance to the utilization of third-party datasets and other Integration; Intellectual Property GAI resources; Apply organizational risk tolerances to fine-tuned third-party
+models; Apply organizational risk tolerance to existing third-party models
+adapted to a new domain; Reassess risk measurements after fine-tuning thirdparty GAI models.",,
+B,pos10,NIST-AI-600-1:pdf:057,712,B:NIST-AI-600-1:pdf:057:chunk:0000,1,exact,1000,"Documenting, reporting, and sharing information about GAI incidents can help mitigate and prevent
+harmful outcomes by assisting relevant AI Actors in tracing impacts to their source. Greater awareness
+and standardization of GAI incident reporting could promote this transparency and improve GAI risk
+management across the AI ecosystem.
+Documentation and Involvement of AI Actors
+AI Actors should be aware of their roles in reporting AI incidents. To better understand previous incidents
+and implement measures to prevent similar ones in the future, organizations could consider developing
+guidelines for publicly available incident reporting which include information about AI actor
+responsibilities. These guidelines would help AI system operators identify GAI incidents across the AI
+lifecycle and with AI Actors regardless of role. Documentation and review of third-party inputs and
+plugins for GAI systems is especially important for AI Actors in the context of incident disclosure; LLM
+inputs an",,
+C,pos01,NIST-AI-100-1:pdf:006,1547,C:NIST-AI-100-1:pdf:006:chunk:0002,1,exact,941,"While there are myriad standards and best practices to help organizations mitigate the risks
+of traditional software or information-based systems, the risks posed by AI systems are in
+many ways unique (See Appendix B). AI systems, for example, may be trained on data that
+can change over time, sometimes significantly and unexpectedly, affecting system functionality and trustworthiness in ways that are hard to understand. AI systems and the contexts
+in which they are deployed are frequently complex, making it difficult to detect and respond
+to failures when they occur. AI systems are inherently socio-technical in nature, meaning
+they are influenced by societal dynamics and human behavior. AI risks – and benefits –
+can emerge from the interplay of technical aspects combined with societal factors related
+to how a system is used, its interactions with other AI systems, who operates it, and the
+social context in which it is deployed.",,
+C,pos02,NIST-AI-100-1:pdf:017,1319,C:NIST-AI-100-1:pdf:017:chunk:0002,1,exact,777,"Fig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of
+trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable &
+Transparent is shown as a vertical box because it relates to all other characteristics.
+
+Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and organizational behavior, the datasets used by AI systems, selection of AI models and algorithms
+and the decisions made by those who build them, and the interactions with the humans who
+provide insight from and oversight of such systems. Human judgment should be employed
+when deciding on the specific metrics related to AI trustworthiness characteristics and the
+precise threshold values for those metrics.",,
+C,pos03,NIST-AI-100-1:pdf:027,1218,C:NIST-AI-100-1:pdf:027:chunk:0001,1,exact,947,"Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that
+direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational
+culture. Management aligns the technical aspects of AI risk management to policies and
+operations. Documentation can enhance transparency, improve human review processes,
+and bolster accountability in AI system teams.
+
+After putting in place the structures, systems, processes, and teams described in the GOVERN function, organizations should benefit from a purpose-driven culture focused on risk
+understanding and management. It is incumbent on Framework users to continue to execute the GOVERN function as knowledge, cultures, and needs or expectations from AI
+actors evolve over time.",,
+C,pos04,NIST-AI-100-1:pdf:037,1131,C:NIST-AI-100-1:pdf:037:chunk:0002,1,exact,806,"MANAGE 2: MANAGE 2.1: Resources required to manage AI risks are taken
+Strategies to into account – along with viable non-AI alternative systems, apmaximize AI proaches, or methods – to reduce the magnitude or likelihood of
+benefits and potential impacts.
+minimize negative MANAGE 2.2: Mechanisms are in place and applied to sustain
+impacts are planned, the value of deployed AI systems.
+prepared,
+MANAGE 2.3: Procedures are followed to respond to and recover
+implemented,
+from a previously unknown risk when it is identified.
+documented, and
+informed by input MANAGE 2.4: Mechanisms are in place and applied, and responfrom relevant AI sibilities are assigned and understood, to supersede, disengage, or
+actors. deactivate AI systems that demonstrate performance or outcomes
+inconsistent with intended use.",,
+C,pos05,NIST-AI-600-1:pdf:005,1364,C:NIST-AI-600-1:pdf:005:chunk:0002,1,exact,782,"nt with other AI RMF
+profiles, this profile offers insights into how risk can be managed across various stages of the AI lifecycle
+and for GAI as a technology.
+As GAI covers risks of models or applications that can be used across use cases or sectors, this document
+is an AI RMF cross-sectoral profile. Cross-sectoral profiles can be used to govern, map, measure, and
+manage risks associated with activities or business processes common across sectors, such as the use of
+large language models (LLMs), cloud-based services, or acquisition.
+This document defines risks that are novel to or exacerbated by the use of GAI. After introducing and
+describing these risks, the document provides a set of suggested actions to help organizations govern,
+map, measure, and manage these risks.",,
+C,pos06,NIST-AI-600-1:pdf:016,1457,C:NIST-AI-600-1:pdf:016:chunk:0002,1,exact,421,"can contain label errors.
+Inaccuracies in these labels can impact the “stability” or robustness of these benchmarks, which many
+GAI practitioners consider during the model selection process.
+Trustworthy AI Characteristics: Accountable and Transparent, Explainable and Interpretable, Fair with
+Harmful Bias Managed, Privacy Enhanced, Safe, Secure and Resilient, Valid and Reliable
+
+3. Suggested Actions to Manage GAI Risks",,
+C,pos07,NIST-AI-600-1:pdf:026,1478,C:NIST-AI-600-1:pdf:026:chunk:0002,1,exact,859,"Review vendor contracts and avoid arbitrary or capricious termination of critical
+GAI technologies or vendor services and non-standard terms that may amplify or
+defer liability in unexpected ways and/or contribute to unauthorized data
+collection by vendors or third-parties (e.g., secondary data use). Consider: Clear Human-AI Configuration;
+GV-6.2-007 assignment of liability and responsibility for incidents, GAI system changes over Information Security; Value Chain
+time (e.g., fine-tuning, drift, decay); Request: Notification and disclosure for and Component Integration
+serious incidents arising from third-party data and systems; Service Level
+Agreements (SLAs) in vendor contracts that address incident response, response
+times, and availability of critical support.
+
+AI Actor Tasks: AI Deployment, Operation and Monitoring, TEVV, Third-party entities",,
+C,pos08,NIST-AI-600-1:pdf:036,1206,C:NIST-AI-600-1:pdf:036:chunk:0001,1,exact,779,"Assess existence or levels of harmful bias, intellectual property infringement, Data Privacy; Intellectual Property;
+data privacy violations, obscenity, extremism, violence, or CBRN information in Obscene, Degrading, and/or
+system training data. Abusive Content; Harmful Bias and MS-2.6-002 Homogenization; Dangerous,
+Violent, or Hateful Content; CBRN
+Information or Capabilities
+
+Re-evaluate safety features of fine-tuned models when the negative risk exceeds Dangerous, Violent, or Hateful MS-2.6-003 organizational risk tolerance. Content
+
+Value Chain and Component Review GAI system outputs for validity and safety: Review generated code to MS-2.6-004 Integration; Dangerous, Violent, or assess risks that may arise from unreliable downstream decision-making. Hateful Content",,
+C,pos09,NIST-AI-600-1:pdf:046,1329,C:NIST-AI-600-1:pdf:046:chunk:0001,1,exact,703,"Apply organizational risk tolerances and controls (e.g., acquisition and
+procurement processes; assessing personnel credentials and qualifications,
+performing background checks; filtering GAI input and outputs, grounding, fine
+tuning, retrieval-augmented generation) to third-party GAI resources: Apply Value Chain and Component MG-3.1-001 organizational risk tolerance to the utilization of third-party datasets and other Integration; Intellectual Property GAI resources; Apply organizational risk tolerances to fine-tuned third-party
+models; Apply organizational risk tolerance to existing third-party models
+adapted to a new domain; Reassess risk measurements after fine-tuning thirdparty GAI models.",,
+C,pos10,NIST-AI-600-1:pdf:057,712,C:NIST-AI-600-1:pdf:057:chunk:0000,1,exact,1000,"Documenting, reporting, and sharing information about GAI incidents can help mitigate and prevent
+harmful outcomes by assisting relevant AI Actors in tracing impacts to their source. Greater awareness
+and standardization of GAI incident reporting could promote this transparency and improve GAI risk
+management across the AI ecosystem.
+Documentation and Involvement of AI Actors
+AI Actors should be aware of their roles in reporting AI incidents. To better understand previous incidents
+and implement measures to prevent similar ones in the future, organizations could consider developing
+guidelines for publicly available incident reporting which include information about AI actor
+responsibilities. These guidelines would help AI system operators identify GAI incidents across the AI
+lifecycle and with AI Actors regardless of role. Documentation and review of third-party inputs and
+plugins for GAI systems is especially important for AI Actors in the context of incident disclosure; LLM
+inputs an",,

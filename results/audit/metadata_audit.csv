@@ -1,0 +1,55 @@
+strategy,question_id,rank,chunk_id,document_id,page,document_type,year,text_on_claimed_page,page_id_consistent,source_matches,document_type_matches,year_matches,all_fields_correct,filter_requested,satisfies_filter
+A,q16,1,A:NIST-AI-100-1:pdf:006:chunk:0003,NIST-AI-100-1,6,framework,2023,True,True,True,True,True,True,,
+A,q16,2,A:NIST-AI-100-1:pdf:043:chunk:0003,NIST-AI-100-1,43,framework,2023,True,True,True,True,True,True,,
+A,q16,3,A:NIST-AI-100-1:pdf:018:chunk:0006,NIST-AI-100-1,18,framework,2023,True,True,True,True,True,True,,
+A,q17,1,A:NIST-AI-600-1:pdf:026:chunk:0005,NIST-AI-600-1,26,profile,2024,True,True,True,True,True,True,,
+A,q17,2,A:NIST-AI-100-1:pdf:030:chunk:0004,NIST-AI-100-1,30,framework,2023,True,True,True,True,True,True,,
+A,q17,3,A:NIST-AI-100-1:pdf:036:chunk:0004,NIST-AI-100-1,36,framework,2023,True,True,True,True,True,True,,
+A,q18,1,A:NIST-AI-600-1:pdf:007:chunk:0005,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,,
+A,q18,2,A:NIST-AI-100-1:pdf:009:chunk:0001,NIST-AI-100-1,9,framework,2023,True,True,True,True,True,True,,
+A,q18,3,A:NIST-AI-600-1:pdf:025:chunk:0005,NIST-AI-600-1,25,profile,2024,True,True,True,True,True,True,,
+A,q19,1,A:NIST-AI-600-1:pdf:055:chunk:0004,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+A,q19,2,A:NIST-AI-600-1:pdf:055:chunk:0005,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+A,q19,3,A:NIST-AI-600-1:pdf:055:chunk:0003,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+A,q20,1,A:NIST-AI-600-1:pdf:007:chunk:0005,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+A,q20,2,A:NIST-AI-600-1:pdf:007:chunk:0006,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+A,q20,3,A:NIST-AI-100-1:pdf:044:chunk:0004,NIST-AI-100-1,44,framework,2023,True,True,True,True,True,True,"{""document_type"": ""profile""}",False
+A,q21,1,A:NIST-AI-100-1:pdf:023:chunk:0000,NIST-AI-100-1,23,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+A,q21,2,A:NIST-AI-100-1:pdf:047:chunk:0000,NIST-AI-100-1,47,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+A,q21,3,A:NIST-AI-100-1:pdf:008:chunk:0000,NIST-AI-100-1,8,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+B,q16,1,B:NIST-AI-100-1:pdf:023:chunk:0002,NIST-AI-100-1,23,framework,2023,True,True,True,True,True,True,,
+B,q16,2,B:NIST-AI-100-1:pdf:019:chunk:0002,NIST-AI-100-1,19,framework,2023,True,True,True,True,True,True,,
+B,q16,3,B:NIST-AI-100-1:pdf:006:chunk:0002,NIST-AI-100-1,6,framework,2023,True,True,True,True,True,True,,
+B,q17,1,B:NIST-AI-100-1:pdf:030:chunk:0003,NIST-AI-100-1,30,framework,2023,True,True,True,True,True,True,,
+B,q17,2,B:NIST-AI-100-1:pdf:026:chunk:0001,NIST-AI-100-1,26,framework,2023,True,True,True,True,True,True,,
+B,q17,3,B:NIST-AI-100-1:pdf:020:chunk:0004,NIST-AI-100-1,20,framework,2023,True,True,True,True,True,True,,
+B,q18,1,B:NIST-AI-100-1:pdf:013:chunk:0002,NIST-AI-100-1,13,framework,2023,True,True,True,True,True,True,,
+B,q18,2,B:NIST-AI-600-1:pdf:007:chunk:0003,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,,
+B,q18,3,B:NIST-AI-100-1:pdf:009:chunk:0001,NIST-AI-100-1,9,framework,2023,True,True,True,True,True,True,,
+B,q19,1,B:NIST-AI-600-1:pdf:055:chunk:0003,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+B,q19,2,B:NIST-AI-600-1:pdf:055:chunk:0002,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+B,q19,3,B:NIST-AI-600-1:pdf:056:chunk:0000,NIST-AI-600-1,56,profile,2024,True,True,True,True,True,True,,
+B,q20,1,B:NIST-AI-600-1:pdf:007:chunk:0003,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+B,q20,2,B:NIST-AI-600-1:pdf:006:chunk:0002,NIST-AI-600-1,6,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+B,q20,3,B:NIST-AI-100-1:pdf:047:chunk:0003,NIST-AI-100-1,47,framework,2023,True,True,True,True,True,True,"{""document_type"": ""profile""}",False
+B,q21,1,B:NIST-AI-100-1:pdf:023:chunk:0001,NIST-AI-100-1,23,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+B,q21,2,B:NIST-AI-100-1:pdf:008:chunk:0000,NIST-AI-100-1,8,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+B,q21,3,B:NIST-AI-100-1:pdf:047:chunk:0000,NIST-AI-100-1,47,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+C,q16,1,C:NIST-AI-100-1:pdf:023:chunk:0002,NIST-AI-100-1,23,framework,2023,True,True,True,True,True,True,,
+C,q16,2,C:NIST-AI-100-1:pdf:019:chunk:0002,NIST-AI-100-1,19,framework,2023,True,True,True,True,True,True,,
+C,q16,3,C:NIST-AI-100-1:pdf:006:chunk:0002,NIST-AI-100-1,6,framework,2023,True,True,True,True,True,True,,
+C,q17,1,C:NIST-AI-100-1:pdf:030:chunk:0003,NIST-AI-100-1,30,framework,2023,True,True,True,True,True,True,,
+C,q17,2,C:NIST-AI-100-1:pdf:026:chunk:0001,NIST-AI-100-1,26,framework,2023,True,True,True,True,True,True,,
+C,q17,3,C:NIST-AI-100-1:pdf:020:chunk:0004,NIST-AI-100-1,20,framework,2023,True,True,True,True,True,True,,
+C,q18,1,C:NIST-AI-100-1:pdf:013:chunk:0002,NIST-AI-100-1,13,framework,2023,True,True,True,True,True,True,,
+C,q18,2,C:NIST-AI-600-1:pdf:007:chunk:0003,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,,
+C,q18,3,C:NIST-AI-100-1:pdf:009:chunk:0001,NIST-AI-100-1,9,framework,2023,True,True,True,True,True,True,,
+C,q19,1,C:NIST-AI-600-1:pdf:055:chunk:0003,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+C,q19,2,C:NIST-AI-600-1:pdf:055:chunk:0002,NIST-AI-600-1,55,profile,2024,True,True,True,True,True,True,,
+C,q19,3,C:NIST-AI-600-1:pdf:056:chunk:0000,NIST-AI-600-1,56,profile,2024,True,True,True,True,True,True,,
+C,q20,1,C:NIST-AI-600-1:pdf:007:chunk:0003,NIST-AI-600-1,7,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+C,q20,2,C:NIST-AI-600-1:pdf:006:chunk:0002,NIST-AI-600-1,6,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+C,q20,3,C:NIST-AI-600-1:pdf:044:chunk:0000,NIST-AI-600-1,44,profile,2024,True,True,True,True,True,True,"{""document_type"": ""profile""}",True
+C,q21,1,C:NIST-AI-100-1:pdf:023:chunk:0001,NIST-AI-100-1,23,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+C,q21,2,C:NIST-AI-100-1:pdf:008:chunk:0000,NIST-AI-100-1,8,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
+C,q21,3,C:NIST-AI-100-1:pdf:047:chunk:0000,NIST-AI-100-1,47,framework,2023,True,True,True,True,True,True,"{""document_type"": ""framework""}",True
