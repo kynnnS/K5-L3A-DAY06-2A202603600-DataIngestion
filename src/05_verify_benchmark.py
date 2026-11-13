@@ -22,8 +22,10 @@ def gold_entries(q):
 def main():
     pages = {(p['document_id'], p['page']): p for p in iter_jsonl(PROCESSED / 'pages.jsonl')}
     questions = list(iter_jsonl(BENCH))
+    test2_path = ROOT / 'benchmark' / 'questions_test2.jsonl'
+    test2 = list(iter_jsonl(test2_path)) if test2_path.exists() else []
     errors = []
-    for q in questions:
+    for q in questions + test2:
         for source_id, page, quote in gold_entries(q):
             p = pages.get((source_id, page))
             if p is None:
@@ -34,7 +36,11 @@ def main():
                 errors.append(f'{q["id"]}: gold page {source_id} p{page} is not an eligible (indexed) page')
             if q.get('filter') and q['filter'].get('document_type') != p['document_type']:
                 errors.append(f'{q["id"]}: filter does not match gold page document_type')
-    ids = [q['id'] for q in questions]
+    ids = [q['id'] for q in questions + test2]
+    if test2:
+        print(f'Fresh holdout test2: {len(test2)} questions, {sum(bool(q.get("filter")) for q in test2)} with filter')
+        if any(q['split'] != 'test2' for q in test2):
+            errors.append('questions_test2.jsonl must only contain split=test2')
     splits = Counter(q['split'] for q in questions)
     filtered = Counter(q['split'] for q in questions if q.get('filter'))
     print(f'Questions: {len(questions)} | splits: {dict(splits)} | filter questions: {dict(filtered)}')

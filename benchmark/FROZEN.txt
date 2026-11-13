@@ -3,3 +3,8 @@ frozen_at_utc: 2026-11-13T11:10:48Z
 16977c39b5ef0d3f49527b09918fcf2b8a9dfb9b95ab1635f65f8c78472f7d5f  benchmark/questions.jsonl
 c5254fe95354d15167f32ed2e83c1d66be4f39b1967ad6ced9965bef183a4166  benchmark/coherence_positions.json
 7d6a4b49bd82e206ec7d9736c22bd6d932997918a73ff4466bbe7304518ef7cd  benchmark/README.md
+
+Extension (test2 + D/E protocol) frozen before implementing D/E or running test2.
+frozen_at_utc: 2026-11-13T12:08:59Z
+5c31758a1c013f35f38a247be618d00b94adcee05770a69b3776eb9ac69e252d  benchmark/questions_test2.jsonl
+379615e6069b894aa1e7de8ea3bd1d7818ce59aca37b1dc1f5240dd8c3080585  benchmark/EXTENSION.md
