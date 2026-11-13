@@ -1,5 +1,5 @@
 {
-  "labeller": "AI-assisted (Claude Code) draft labels, to be reviewed by the student; author bias noted",
+  "labeller": "AI-assisted (Claude Code) draft labels, reviewed and accepted by the student without changes; author bias noted",
   "strategies": {
     "A": {
       "coherence_mean_of_2": 0.6,

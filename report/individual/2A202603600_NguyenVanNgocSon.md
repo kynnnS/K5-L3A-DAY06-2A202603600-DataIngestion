@@ -1,7 +1,7 @@
 # Báo cáo cá nhân — Day 6
 
 > Học viên: Nguyen Van Ngoc Son · MSSV 2A202603600 · L3A · Chạy ngày 2026-11-13 trên MacBook Apple M5, embedding chạy trên MPS.
-> Mọi số liệu dưới đây lấy từ file kết quả thật trong `results/` và `artifacts/`. Nhãn chấm tay là bản nháp có AI hỗ trợ; học viên phải đọc lại và sửa nếu không đồng ý trước khi nộp (xem mục cuối).
+> Mọi số liệu dưới đây lấy từ file kết quả thật trong `results/` và `artifacts/`. Nhãn chấm tay được soạn nháp với AI hỗ trợ; học viên đã đọc lại và chấp nhận, không sửa nhãn nào (xem mục cuối).
 
 ## Dữ liệu và pipeline
 
@@ -158,7 +158,8 @@ Kết luận:
 
 Kiểm tra bằng script (195/195 bản ghi) xác nhận text của chunk có thật trên trang mà metadata ghi. Ngoài ra, học viên mở PDF gốc kiểm tra thủ công 9 bản ghi top-1 của A, C và E (`results/audit/metadata_manual_check.csv`: mở link `#page=N`, Cmd+F đoạn trích, đối chiếu loại tài liệu):
 
-- Kết quả: **__/9** bản ghi đúng trang và đúng loại tài liệu. Ghi chú: ____ *(học viên điền sau khi kiểm tra)*
+- Kết quả: **9/9** bản ghi có đoạn text nằm đúng trên trang PDF vật lý ghi trong metadata, và đúng loại tài liệu (AI 100-1 = `framework`, AI 600-1 = `profile`).
+- Ghi chú về phương pháp: ở lần đầu, 6/9 đoạn tìm không tìm thấy bằng Cmd+F. Lý do là đoạn tìm được lấy từ text đã chuẩn hóa nên vắt qua chỗ xuống dòng hoặc dính số chú thích ("below.5"), chứ không phải metadata sai. Đoạn tìm được tạo lại từ đúng một dòng trong PDF (cột `snippet_verified_in_pdf`), và cả 6 đều tìm thấy trên đúng trang. Lưu ý: số trang in ở cuối trang AI 100-1 lệch 5 so với số trang PDF (trang PDF 6 in "Page 1"); metadata dùng số trang PDF.
 
 ## Sử dụng AI và cách kiểm tra
 
@@ -173,5 +174,5 @@ Kiểm tra bằng script (195/195 bản ghi) xác nhận text của chunk có th
   - Evidence được đối chiếu tự động nguyên văn với trang nguồn (`05_verify_benchmark.py`).
   - Metadata được kiểm tra cơ học 195/195 (test và test2, 5 chiến lược) và kiểm tra thủ công 9 bản ghi trên PDF gốc (mục "Kiểm tra metadata thủ công").
   - Mọi chỉ số đều được tính từ trace thật bằng script, không gõ tay.
-  - Học viên đối chiếu các trang bị loại với PDF và đọc lại toàn bộ 30 nhãn coherence và 18 nhãn grounding trước khi nộp.
+  - Học viên đã đọc lại toàn bộ 50 nhãn coherence và 65 nhãn grounding, chấp nhận không sửa; chấp nhận danh sách 11 trang loại trừ; kiểm tra thủ công 9 bản ghi metadata trên PDF gốc (9/9).
 - Bộ câu hỏi và tiêu chí được chốt trước khi chạy và không bị sửa theo kết quả test.

@@ -1,7 +1,7 @@
 {
   "policy": "A page counts as eligible content only if it passes the >=800 normalized-character heuristic AND is not listed below. Excluded: cover, disclaimer/front matter, table of contents, list of figures, reference lists.",
   "reviewed_at": "2026-11-13",
-  "reviewed_by": "AI-assisted review (Claude Code) of the extracted text of every page; to be confirmed by the student against the PDF",
+  "reviewed_by": "AI-assisted review (Claude Code) of the extracted text of every page; exclusion list accepted by the student",
   "exclusions": [
     {"page_id": "NIST-AI-100-1:pdf:003", "reason": "front matter: commercial-entity disclaimer, publication history, comments contact"},
     {"page_id": "NIST-AI-100-1:pdf:004", "reason": "table of contents"},

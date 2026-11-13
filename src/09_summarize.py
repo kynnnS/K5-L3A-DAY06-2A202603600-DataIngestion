@@ -13,7 +13,7 @@ def read(name):
 
 def main():
     coherence, grounding, meta = read('coherence_labels.csv'), read('grounding_labels.csv'), read('metadata_audit.csv')
-    out = {'labeller': 'AI-assisted (Claude Code) draft labels, to be reviewed by the student; author bias noted',
+    out = {'labeller': 'AI-assisted (Claude Code) draft labels, reviewed and accepted by the student without changes; author bias noted',
            'strategies': {}}
     for s in 'ABCDE':
         c = [int(r['label_0_2']) for r in coherence if r['strategy'] == s]
