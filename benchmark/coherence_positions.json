@@ -1,0 +1,55 @@
+{
+  "rule": "Eligible pages sorted by page_id; take indices round(i*(N-1)/9), i=0..9 (N=92); position = character offset len(page_text)//2 on that page. Fixed before any retrieval or scoring.",
+  "positions": [
+    {
+      "position_id": "pos01",
+      "page_id": "NIST-AI-100-1:pdf:006",
+      "char_offset": 1547
+    },
+    {
+      "position_id": "pos02",
+      "page_id": "NIST-AI-100-1:pdf:017",
+      "char_offset": 1319
+    },
+    {
+      "position_id": "pos03",
+      "page_id": "NIST-AI-100-1:pdf:027",
+      "char_offset": 1218
+    },
+    {
+      "position_id": "pos04",
+      "page_id": "NIST-AI-100-1:pdf:037",
+      "char_offset": 1131
+    },
+    {
+      "position_id": "pos05",
+      "page_id": "NIST-AI-600-1:pdf:005",
+      "char_offset": 1364
+    },
+    {
+      "position_id": "pos06",
+      "page_id": "NIST-AI-600-1:pdf:016",
+      "char_offset": 1457
+    },
+    {
+      "position_id": "pos07",
+      "page_id": "NIST-AI-600-1:pdf:026",
+      "char_offset": 1478
+    },
+    {
+      "position_id": "pos08",
+      "page_id": "NIST-AI-600-1:pdf:036",
+      "char_offset": 1206
+    },
+    {
+      "position_id": "pos09",
+      "page_id": "NIST-AI-600-1:pdf:046",
+      "char_offset": 1329
+    },
+    {
+      "position_id": "pos10",
+      "page_id": "NIST-AI-600-1:pdf:057",
+      "char_offset": 712
+    }
+  ]
+}

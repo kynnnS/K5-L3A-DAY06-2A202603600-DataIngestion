@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed-size characters per page,500,50,"document_id, source, page, page_id, document_type, year, language, chunk_index, start_char, end_char_approx",none,sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 (normalized; cosine; Chroma),"Small chunks fit the model's token window, so retrieval is sharp; but fixed cuts can split long evidence quotes and cut mid-sentence, hurting Evidence Hit@3 and coherence for long-quote questions (q04, q08, q18).",,,,,"Hypothesis written before any retrieval run (2026-11-13)."
+B,paragraph/heading blocks per page (merged up to max),<=1000,0,same as A,none,same as A,"Paragraph chunks keep ideas whole (better coherence, long quotes stay in one chunk), but longer chunks exceed the model's max_seq_length so the tail is not embedded; expect higher coherence, Hit@3 similar or lower than A on questions whose evidence sits late in a chunk.",,,,,"Only chunking differs from A (A-B comparison)."
+C,same chunks as B,<=1000,0,same as B,"document_type where question supplies it (4 questions); otherwise unfiltered",same as A,"Filter removes the other document's near-duplicate definitions, so filter questions improve vs B with 100% filter compliance; unfiltered questions identical to B by construction.",,,,,"Only filter differs from B (B-C comparison)."

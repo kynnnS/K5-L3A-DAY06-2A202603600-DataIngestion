@@ -1,0 +1,22 @@
+{
+  "policy": "A page counts as eligible content only if it passes the >=800 normalized-character heuristic AND is not listed below. Excluded: cover, disclaimer/front matter, table of contents, list of figures, reference lists.",
+  "reviewed_at": "2026-11-13",
+  "reviewed_by": "AI-assisted review (Claude Code) of the extracted text of every page; to be confirmed by the student against the PDF",
+  "exclusions": [
+    {"page_id": "NIST-AI-100-1:pdf:003", "reason": "front matter: commercial-entity disclaimer, publication history, comments contact"},
+    {"page_id": "NIST-AI-100-1:pdf:004", "reason": "table of contents"},
+    {"page_id": "NIST-AI-100-1:pdf:005", "reason": "list of tables and figures"},
+    {"page_id": "NIST-AI-600-1:pdf:003", "reason": "front matter: About AI at NIST, acknowledgments, disclaimer"},
+    {"page_id": "NIST-AI-600-1:pdf:058", "reason": "Appendix B. References (citation list only)"},
+    {"page_id": "NIST-AI-600-1:pdf:059", "reason": "Appendix B. References (citation list only)"},
+    {"page_id": "NIST-AI-600-1:pdf:060", "reason": "Appendix B. References (citation list only)"},
+    {"page_id": "NIST-AI-600-1:pdf:061", "reason": "Appendix B. References (citation list only)"},
+    {"page_id": "NIST-AI-600-1:pdf:062", "reason": "Appendix B. References (citation list only)"},
+    {"page_id": "NIST-AI-600-1:pdf:063", "reason": "Appendix B. References (citation list only)"},
+    {"page_id": "NIST-AI-600-1:pdf:064", "reason": "Appendix B. References (citation list only)"}
+  ],
+  "notes": [
+    "NIST-AI-100-1 p16 (411 chars) is a figure whose extracted text is scrambled word order; already below threshold.",
+    "NIST-AI-100-1 p39 and NIST-AI-600-1 p50 hold real body text but are short (<800 chars), so they are not counted or indexed. Evidence on them cannot be retrieved."
+  ]
+}

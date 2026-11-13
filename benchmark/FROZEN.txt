@@ -1,0 +1,5 @@
+Benchmark frozen before any retrieval run.
+frozen_at_utc: 2026-11-13T11:10:48Z
+16977c39b5ef0d3f49527b09918fcf2b8a9dfb9b95ab1635f65f8c78472f7d5f  benchmark/questions.jsonl
+c5254fe95354d15167f32ed2e83c1d66be4f39b1967ad6ced9965bef183a4166  benchmark/coherence_positions.json
+7d6a4b49bd82e206ec7d9736c22bd6d932997918a73ff4466bbe7304518ef7cd  benchmark/README.md

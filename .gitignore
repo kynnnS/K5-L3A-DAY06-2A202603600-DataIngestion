@@ -8,3 +8,10 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+
+# Day 06 corpus: keep source PDFs, full extracted text and the vector DB local
+data/raw/*.pdf
+data/raw/*.part
+data/processed/pages.jsonl
+data/processed/chunks_*.jsonl
+artifacts/chroma/

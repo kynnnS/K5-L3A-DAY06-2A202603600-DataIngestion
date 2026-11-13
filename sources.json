@@ -1,0 +1,28 @@
+[
+  {
+    "source_id": "NIST-AI-100-1",
+    "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    "url": "https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf",
+    "landing_page": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+    "doi": "10.6028/NIST.AI.100-1",
+    "issued_at": "2023-01-26",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "language": "en",
+    "document_type": "framework",
+    "license_or_permission": "US federal government publication; verify embedded third-party elements and redistribution conditions before republishing PDF",
+    "filename": "NIST.AI.100-1.pdf"
+  },
+  {
+    "source_id": "NIST-AI-600-1",
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+    "landing_page": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "doi": "10.6028/NIST.AI.600-1",
+    "issued_at": "2024-07-26",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "language": "en",
+    "document_type": "profile",
+    "license_or_permission": "US federal government publication; verify embedded third-party elements and redistribution conditions before republishing PDF",
+    "filename": "NIST.AI.600-1.pdf"
+  }
+]
