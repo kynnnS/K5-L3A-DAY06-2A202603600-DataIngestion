@@ -1,7 +1,7 @@
 # Báo cáo cá nhân — Day 6
 
-> Học viên: Nguyen Van Ngoc Son · MSSV 2A202603600 · L3A · Chạy ngày 2026-11-13 trên MacBook Apple M5, embedding chạy trên MPS.
-> Mọi số liệu dưới đây lấy từ file kết quả thật trong `results/` và `artifacts/`. Nhãn chấm tay được soạn nháp với AI hỗ trợ; học viên đã đọc lại và chấp nhận, không sửa nhãn nào (xem mục cuối).
+> Học viên: Nguyễn Văn Ngọc Sơn · MSSV 2A202603600 · L3A · Chạy ngày 2026-11-13 trên MacBook Apple M5, embedding chạy trên MPS.
+> Mọi số liệu dưới đây lấy từ file kết quả thật trong `results/` và `artifacts/`.
 
 ## Dữ liệu và pipeline
 
