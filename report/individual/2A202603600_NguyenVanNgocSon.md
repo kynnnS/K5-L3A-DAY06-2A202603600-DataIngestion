@@ -80,6 +80,7 @@ Chỉ số phụ, không thay thế chỉ số chính: Page Hit@3 (trang gold c�
     - **A làm vỡ evidence**: 6/21 câu không có chunk A nào chứa trọn evidence (q02, q04, q06, q08, q18, q20), so với 2/21 ở B. Vì vậy A tìm đúng trang nhiều hơn (Page Hit@3 14/21 so với 13/21) nhưng không ghi được hit.
     - **B vượt cửa sổ model**: 239/330 chunk B (72%) dài hơn 128 token và bị cắt khi embedding, so với 25/561 (4%) ở A. Có 4/21 câu mà evidence nằm một phần ngoài phần được embedding.
   - Về chất lượng, B tốt hơn rõ: coherence 1,30 so với 0,60, grounding 1,17 so với 0,83. B cũng ít chunk hơn 41% và ingest nhanh hơn.
+  - **Lỗi phụ của B: chunk chỉ có tiêu đề.** B tạo 11/330 chunk ngắn dưới 100 ký tự, gồm tiêu đề lặp đầu trang ("NIST AI 100-1 AI RMF 1.0"), dòng "Page 31", hay heading đứng một mình. Các chunk này chiếm 5/63 vị trí top-3, so với 2/63 ở A. Ví dụ ở q06, hạng 2 của B là chunk tiêu đề 57 ký tự "3. AI Risks and Trustworthiness" trên chính trang gold, đẩy chunk chứa evidence xuống hạng 4.
 - **So sánh B–C (chỉ đổi lọc):**
   - 17/21 câu trùng hệt nhau theo thiết kế. Trên 4 câu filter, C đạt tuân thủ **4/4** so với 2/4 ở B. Ví dụ ở q20, B để lọt một chunk của framework ở hạng 3 (AI 100-1 p47), còn C chỉ trả về chunk của profile.
   - Tuy nhiên filter **không đổi Hit nào**: q20 và q21 đều trúng ở cả B lẫn C, q14 và q15 trượt ở cả hai. Filter giúp chunk evidence leo hạng trong phạm vi tìm (q15 từ hạng 48/330 lên 18/183; q14 từ 16/330 lên 14/147), nhưng không đủ để vào top-3. Nút thắt nằm ở embedding chứ không phải ở phạm vi tìm.
@@ -102,6 +103,7 @@ Chỉ số phụ, không thay thế chỉ số chính: Page Hit@3 (trang gold c�
 - **Nếu làm lại hoặc mở rộng, cải tiến gì?**
   - Đặt giới hạn chunk theo **token của model** (≤128) và cắt theo câu thay vì cắt cứng ở 1000 ký tự; hoặc đổi sang model có cửa sổ 512 token. Đây là cách sửa trực tiếp lỗi ở q11 và q18.
   - Trích bảng bằng `page.find_tables()` để không trộn cột (sửa pos04, pos07–09).
+  - Bỏ tiêu đề và chân trang lặp lại ("NIST AI 100-1 AI RMF 1.0", "Page N") khi chuẩn hóa, và gộp chunk dưới khoảng 100 ký tự vào chunk kế bên (sửa lỗi chunk chỉ có tiêu đề ở q06).
   - Cho phép chunk vắt qua 2 trang và ghi metadata khoảng trang.
   - Thêm BM25 (hybrid) cho từ viết tắt và mã như "GAI PWG", "GV-1.1".
   - Thêm trường `section` (Part 1/Part 2/Appendix) để có filter phân biệt được hơn `document_type`.

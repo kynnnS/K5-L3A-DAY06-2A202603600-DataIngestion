@@ -17,7 +17,7 @@ Cần Python 3.12 (đã dùng 3.12.5) và mạng cho lần tải đầu (PDF, th
 uv python install 3.12.5
 uv venv --python 3.12.5 .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
-uv pip install -r requirements.txt
+uv pip install -r requirements.txt   # hoặc requirements-lock.txt để cài đúng các phiên bản đã chạy
 
 # Hoặc dùng pip
 python3.12 -m venv .venv && source .venv/bin/activate
